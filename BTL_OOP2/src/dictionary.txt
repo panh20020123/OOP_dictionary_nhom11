@@ -1,0 +1,490 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@panh20020123 
+panh20020123
+/
+Group11_OOP_Dictionary
+Private
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+1
+Security
+Insights
+Settings
+Group11_OOP_Dictionary/CommandLine/resource/dictionary.txt
+@Racker-Hank
+Racker-Hank dic.txt
+Latest commit 0654c65 7 hours ago
+ History
+ 1 contributor
+446 lines (397 sloc)  16.1 KB
+   
+abandonment /ə'bændənmənt/
+- sự bỏ, sự từ bỏ, sự bỏ rơi, sự ruồng bỏ
+- tình trạng bị bỏ rơi, tình trạng bị ruồng bỏ
+- sự phóng túng, sự tự do, sự buông thả
+
+abbreviate /ə'bri:vieit/
+- tóm tắt, viết tắt; rút ngắn lại (cuộc đi thăm...)
+- (toán học) ước lược, rút gọn
+- tương đối ngắn
+
+abbreviation /ə,bri:vi'eiʃn/
+- sự tóm tắt, sự rút ngắn (cuộc đi thăm...)
+- bài tóm tắt
+- chữ viết tắt
+- (toán học) sự ước lược, sự rút gọn
+
+abdominal /æb'dɔminl/
+- (thuộc) bụng; ở bụng
+
+abide /ə'baid/
+- tồn tại; kéo dài
+- (: by) tôn trọng, giữ, tuân theo, chịu theo; trung thành với
+- (từ cổ,nghĩa cổ) ở, ngụ tại
+- chờ, chờ đợi
+- chịu đựng, chịu
+- chống đỡ được (cuộc tấn công)
+
+ability /ə'biliti/
+- năng lực, khả năng (làm việc gì)
+- (số nhiều) tài năng, tài cán
+- thẩm quyền
+- (thương nghiệp) khả năng thanh toán được; vốn sẵn có, nguồn vốn (để đáp ứng khi cần thiết)
+
+able /'eibl/
+- có năng lực, có tài
+- (pháp lý) có đủ tư cách, có đủ thẩm quyền
+
+bean /bi:n/
+- đậu
+- hột (cà phê)
+- (từ lóng) cái đầu
+- (từ lóng) tiền đồng
+
+bicycle /'baisikl/
+- xe đạp
+
+big /big/
+- to, lớn
+- bụng to, có mang, có chửa
+- quan trọng
+- hào hiệp, phóng khoáng, rộng lượng
+- huênh hoang, khoác lác
+- ra vẻ quan trọng, với vẻ quan trọng
+- huênh hoang khoác lác
+
+billionaire /,biljə'nəe/
+- (từ Mỹ,nghĩa Mỹ) nhà tỉ phú
+
+binary /'bainəri/
+- đôi, nhị nguyên, nhị phân
+
+bye-bye /'baibai/
+- huây roen cái giường
+- chào tạm biệt
+
+bygone /'baigɔn/
+- quá khứ, qua rồi, cũ kỹ
+- quá khứ; tội lỗi đã qua; chuyện đã qua
+
+cat /kæt/
+- con mèo
+- (động vật học) thú thuộc giống mèo (sư tử, hổ, báo...)
+- mụ đàn bà nanh ác; đứa bé hay cào cấu
+- (hàng hải) đòn kéo neo ((cũng) cat head)
+- roi chín dài (để tra tấn) ((cũng) cat o-nine-tails)
+- con khăng (để chơi đanh khăng)
+- (hàng hải) kéo (neo) lên đòn kéo neo
+- đánh bằng roi chín dài
+
+catch /kætʃ/
+- sự bắt, sự nắm lấy; cái bắt, cái vồ, cái chộp
+- sự đánh cá; mẻ cá
+- nhiều người bị bắt, vật bị túm được; mồi ngon đáng để bẫy; món bở
+- cái gài, cái móc, cái then cửa, cái chốt cửa
+- cái bẫy, mưu kế lừa người; câu hỏi mẹo (để cho ai vào bẫy)
+- đoạn (bài nói, câu chuyện...) chợt nghe thấy
+- (kỹ thuật) cái hãm, máy hãm, khoá dừng
+- bắt lấy, nắm lấy, tóm lấy, chộp lấy
+- đánh được, câu được (cá)
+- bắt kịp, theo kịp, đuổi kịp
+- mắc, bị nhiễm
+- hiểu được, nắm được (ý nghĩa); nhận ra
+- bắt gặp, bắt được quả tang; chợt gặp, chợt thấy
+- mắc vào, vướng, móc, kẹp
+- chặn đứng, nén, giữ
+- thu hút, lôi cuốn
+- đánh, giáng
+- bắt lửa (cái gì...)
+- đóng băng
+- mắc, vướng, móc, kẹp
+- ăn khớp, vừa
+- bấu, víu lấy, níu lấy, chộp lấy
+
+centimeter /'senti,mi:tə/ 
+- xentimet
+
+centre /'sentə/
+- điểm giữa, tâm; trung tâm; trung khu; trung ương
+- nhân vật trung tâm
+- (thể dục,thể thao) trung phong (bóng đá)
+- (chính trị) phái giữa
+- (quân sự) đạo trung quân
+- (kỹ thuật) mẫu, dưỡng (dùng trong luyện kim)
+- (kiến trúc) khung tò vò, khung bán nguyệt (bằng gỗ, dùng khi xây dựng)
+- đặt vào giữa, để vào giữa, tập trung vào, xoáy quanh
+- (thể dục,thể thao) đá (bóng) vào giữa
+- tìm tâm (của vật gì)
+
+century /'sentʃuri/
+- trăm năm, thế kỷ
+- trăm (cái gì đó...)
+- (từ Mỹ,nghĩa Mỹ),  (thông tục) trăm đô la
+- (từ cổ,nghĩa cổ) (La mã) đại đội (gồm 100 người)
+
+certified /'sə:tifaid/
+- được chứng nhận, được nhận thực, được chứng thực
+- (từ Mỹ,nghĩa Mỹ) được đảm bảo giá trị
+- (y học) được chứng nhận là mắc bệnh tinh thần
+
+chair /tʃeə/
+- ghế
+- chức giáo sư đại học
+- chức thị trưởng
+- ghế chủ toạ, ghế chủ tịch (buổi họp); (từ Mỹ,nghĩa Mỹ) chủ tịch (buổi họp)
+- (từ Mỹ,nghĩa Mỹ) ghế điện
+- (từ Mỹ,nghĩa Mỹ) chỗ ngồi của nhân chứng (ở toà án)
+- (ngành đường sắt) gối đường ray
+- cử làm chủ tịch, chọn làm chủ tịch
+- đặt lên kiệu rước, đặt vào ghế rồi khiêng bổng (người thắng cuộc trong cuộc đấu hoặc được bầu trong một cuộc tuyển cử)
+- làm chủ toạ (buổi họp)
+
+change /tʃeindʤ/
+- sự đổi, sự thay đổi, sự biến đổi
+- trăng non
+- bộ quần áo sạch (để dự phòng) ((cũng) a change of clothes)
+- tiền đổi, tiền lẻ
+- tiền phụ lại (cho khách hàng)
+- nơi đổi tàu xe
+- sự giao dịch chứng khoán; thị trường chứng khoán (ở Luân-đôn) ((cũng) Change,  (viết tắt) của Exchange)
+- (số nhiều) trật tự rung chuông
+- đổi, thay, thay đổi
+- đổi, đổi chác
+- (: to,  into,  from) biến đổi, đổi thành
+- đổi ra tiền lẻ
+- thay đổi, biến đổi
+- sang tuần trăng mới, sang tuần trăng non (trăng)
+- thay quần áo
+- đổi tàu xe
+- đổi chiều đổi hướng (trong cuộc tranh luận...)
+- (thông tục) thay giày
+- đổi chân nhịp (khi diễu hành theo nhịp trống)
+
+charity /'tʃæriti/
+- lòng nhân đức, lòng từ thiện; lòng thảo
+- lòng khoan dung
+- hội từ thiện; tổ chức cứu tế
+- việc thiện; sự bố thí, sự cứu tế
+- (số nhiều) của bố thí, của cứu tế
+
+deserve /di'zə:v/
+- đáng, xứng đáng
+
+design /di'zain/
+- đề cương, bản phác thảo, phác hoạ, đồ án
+- ý muốn, ý định, dự định, dự kiến, mục đích; ý đồ, mưu đồ
+- kế hoạch
+- cách sắp xếp, cách trình bày, cách trang trí
+- kiểu, mẫu, loại, dạng
+- khả năng sáng tạo (kiểu, cách trình bày...), tài nghĩ ra (mưu kế...); sự sáng tạo
+- phác hoạ, vẽ phác (tranh...), vẽ kiểu (quần áo, xe ô tô...), thiết kế, làm đồ án (nhà cửa), làm đề cương, phác thảo cách trình bày (sách, tranh ảnh nghệ thuật)
+- có ý định, định, dự kiến, trù tính; có y đồ, có mưu đồ
+- chỉ định, để cho, dành cho
+- làm nghề vẽ kiểu, làm nghề xây dựng đồ án
+
+develop /di'veləp/
+- trình bày, bày tỏ, thuyết minh (luận điểm, vấn đề...)
+- phát triển, mở mang, mở rộng, khuếch trương, làm cho phát đạt
+- khai thác
+- nhiễm, tiêm nhiễm (thói quen...); ngày càng bộc lộ rõ, ngày càng phát huy (khả năng, khuynh hướng...)
+- (nhiếp ảnh) rửa (phim ảnh)
+- (quân sự) triển khai, mở
+- (toán học) khai triển
+- tỏ rõ ra, bộc lộ ra, biểu lộ ra
+- phát triển, mở mang, nảy nở
+- tiến triển
+- hiện (ảnh)
+
+diagram /'daiəgræm/
+- biểu đồ
+
+diamond /'daiəmənd/
+- kim cương
+- vật lóng lánh, điểm lóng lánh (như kim cương)
+- dao cắt kính ((thường) glazier's diamond,  cutting diamond)
+- hình thoi
+- (số nhiều) hoa rô
+- (ngành in) cỡ bốn (chữ)
+- (từ Mỹ,nghĩa Mỹ) sân bóng chày
+- bằng kim cương; nạm kim cương
+- hình thoi
+- nạm kim cương; trang sức bằng kim cương
+
+different /'difrənt/
+- khác, khác biệt, khác nhau
+- tạp, nhiều
+
+digit /'didʤit/
+- ngón chân, ngón tay
+- ngón (bề ngang ngón tay dùng làm đơn vị đo)
+- (thiên văn học) ngón (một phần mười hai đường kính mặt trời hoặc mặt trăng để đo nhật thực, nguyệt thực)
+- con số (A-rập)
+
+eruption /i'rʌpʃn/
+- sự phun (núi lửa)
+- sự nổ ra; sự phọt ra
+- (y học) sự phát ban
+- sự nhú lên, sự mọc (răng)
+
+expansion /iks'pænʃn/
+- sự mở rộng, sự bành trướng, sự phát triển, sự phồng ra; phần mở rộng
+- (kỹ thuật) sự giãn, sự nở; độ giãn, độ nở
+- (toán học) sự khai triển
+
+finish /'finiʃ/
+- sự kết thúc, sự kết liễu; phần cuối, phần kết thúc, đoạn kết thúc
+- sự sang sửa, cuối cùng, sự hoàn thiện
+- tích chất kỹ, tính chất trau chuốt
+- hoàn thành, kết thúc, làm xong
+- dùng hết, ăn (uống) hết, ăn (uống) sạch
+- sang sửa lần cuối cùng
+- hoàn chỉnh sự giáo dục của (ai)
+- (thông tục) giết chết, cho đi đời
+- (thông tục) làm mệt nhoài
+- (từ Mỹ,nghĩa Mỹ), (thông tục) làm cho không còn giá trị gì nữa
+- hoàn thành, kết thúc, làm xong ((như) to finish off)
+- dùng hết, ăn hết sạch; ăn nốt cho hết
+- chấm dứt mọi quan hệ với; thờ ơ với
+
+fire /'faie/
+- lửa, ánh lửa
+- sự cháy, hoả hoạn, sự cháy nhà
+- ánh sáng
+- sự bắn hoả lực
+- lò sưởi
+- sự tra tấn bằng lửa
+- sự sốt, cơn sốt
+- ngọn lửa ((nghĩa bóng)), sự hăng hái, nhiệt tình, sự sốt sắng, sự vui vẻ hoạt bát
+- sự xúc động mạnh mẽ; nguồn cảm hứng; óc tưởng tượng linh hoạt
+- đốt cháy, đốt (lò...)
+- làm nổ, bắn (súng...)
+- làm đỏ
+- nung
+- sấy (chè, thuốc lá...)
+- đốt, khử trùng (bằng chất hoá học)
+- thải, đuổi, sa thải
+- (nghĩa bóng) kích thích (trí tưởng tượng)
+- (nghĩa bóng) khuyến khích, làm phấn khởi
+- bắt lửa, cháy, bốc cháy
+- nóng lên
+- rực đỏ
+- nổ (súng); nổ súng, bắn
+- chạy (máy)
+- bắt đầu tiến hành
+- nổ (súng)
+- (nghĩa bóng) phát ra, nổ ra
+
+footprint /'futprint/
+- dấu chân, vết chân
+
+full /ful/
+- đầy, đầy đủ, nhiều, tràn trề, tràn ngập, chan chứa
+- chật, đông, chật ních, hết chỗ ngồi (rạp hát, xe buýt...)
+- no, no nê
+- hết sức, ở mức độ cao nhất
+- tròn, đầy đặn, nở nang (đàn bà)
+- giữa, hoàn toàn, trọn vẹn, đầy đủ
+- lùng nhùng, phồng, xếp nhiều nếp (quần áo...)
+- thịnh soạn
+- chính thức; thuần (giống...); ruột (anh em...)
+- đậm, thẫm (màu sắc); chói (ánh sáng); sang sảng (tiếng)
+- (thơ ca) rất
+- hoàn toàn
+- đúng, trúng
+- quá
+- toàn bộ
+- điểm cao nhất
+- chuội và hồ (vải)
+
+grace /greis/
+- vẻ duyên dáng, vẻ yêu kiều; vẻ uyển chuyển
+- (số nhiều) vẻ phong nhã, vẻ thanh nhã
+- thái độ (trong khi làm việc gì)
+- ơn huệ; sự trọng đãi, sự chiếu cố
+- sự gia hạn, sự cho hoãn (có tính chất gia ơn)
+- sự miễn xá, sự khoan hồng, sự khoan dung
+- ơn trời, ơn Chúa
+- lời cầu nguyện (trước hay sau bữa ăn cơm)
+- ngài (tiếng xưng hô với những người thuộc dòng quý tộc, với các giám mục...)
+- (âm nhạc) nét hoa mỹ (trong bản nhạc, bài ca)
+- sự cho phép dự thi (ở trường đại học)
+- (số nhiều) (The Graces) (thần thoại,thần học) thần Mỹ nữ
+- làm cho duyên dáng thêm
+- làm vinh dự, làm vẻ vang, ban vinh dự cho
+
+guardian /'gɑ:djən/
+- người bảo vệ
+- (pháp lý) người giám hộ (tài sản...)
+
+hack /hæk/
+- búa, rìu; cuốc chim (của công nhân mỏ)
+- vết toác; vết thương do bị đá vào ống chân (đá bóng)
+- đốn, đẽo, chém, chặt mạnh
+- (thể dục,thể thao) đá vào ống chân (ai)
+- chém, chặt mạnh
+- ho khan
+- ngựa cho thuê
+- ngựa ốm, ngựa tồi
+- ngựa thường (để cưỡi; không phải ngựa thi)
+- người làm thuê những công việc nặng nhọc; người viết văn thuê
+- (từ Mỹ,nghĩa Mỹ) xe ngựa cho thuê
+- (định ngữ) làm thuê, làm mướn
+- làm thành nhàm
+- thuê (ngựa)
+- cưỡi (ngựa)
+- cưỡi ngựa (đi thong dong)
+- dùng ngựa thuê
+- (từ Mỹ,nghĩa Mỹ) đánh xe ngựa thuê
+- máng đựng thịt (cho chim ó, diều hâu)
+- giá phơi gạch
+
+here /hiə/
+- đây, ở đây, ở chỗ này
+- nơi đây, chốn này
+
+inch /intʃ/
+- đảo nhỏ (Ê-cốt)
+- insơ (đơn vị đo chiều dài Anh bằng 2, 54 cm)
+- mức (nước, mưa...) một insơ
+- một chút, một chút xíu, một tí; một tấc (đất...); một bước
+- (số nhiều) tầm vóc
+- dần dần; tí một; từng bước
+- về mọi mặt, hoàn toàn, hệt như
+- (tục ngữ) cho nó một thì nó vớ mười; cho nó được đằng chân nó sẽ lấn đằng đầu
+- suýt nữa, gần
+- đi lần lần, đi rất chậm, đi từng bước, dịch lần lần
+
+incoming /'in,kʌmiɳ/
+- sự vào, sự đến
+- (số nhiều) thu nhập, doanh thu, lợi tức
+- vào, mới đến
+- nhập cư
+- kế tục, thay thế; mới đến ở, mới đến nhậm chức
+- dồn lại
+
+inconsiderate /,inkən'sidərit/
+- thiếu ân cần, thiếu chu đáo, thiếu quan tâm
+- thiếu thận trọng, thiếu suy nghĩ, khinh suất
+
+incorporate /in'kɔ:pərit/
+- kết hợp chặt chẽ
+- hợp thành tổ chức, hợp thành đoàn thể
+- sáp nhập, hợp nhất, kết hợp chặt chẽ
+- hợp thành tổ chức, hợp thành đoàn thể
+- kết nạp vào tổ chức, kết nạp vào đoàn thể
+- sáp nhập, hợp nhất
+
+inequality /,ini:'kwɔliti/
+- sự không bằng nhau; sự không bình đẳng
+- tính không đều
+- sự khác nhau
+- tính hay thay đổi
+- sự không công minh
+- (toán học) bất đẳng thức
+
+introspective /,introu'spektiv/
+- hay tự xem xét nội tâm; hay nội quan
+
+invisibility /in,vizə'biliti/
+- tính không thể trông thấy được, tính vô hình
+- tính không thể gặp được (ở một lúc nào đó)
+
+joy /dʤɔi/
+- sự vui mừng, sự hân hoan, sự vui sướng
+- niềm vui
+- (thơ ca) vui mừng, vui sướng
+- (thơ ca) làm vui mừng, làm vui sướng
+
+keep /ki:p/
+- giữ, giữ lại
+- giữ, tuân theo, y theo, thi hành, đúng
+- giữ, canh phòng, bảo vệ; phù hộ
+- giữ gìn, giấu
+- giữ gìn (cho ngăn nắp gọn gàng), bảo quản; chăm sóc, trông nom; quản lý
+- giữ riêng, để ra, để riêng ra, để dành
+- giữ lại, giam giữ
+- ((thường) + from) giữ cho khỏi, giữ đứng, ngăn lại, nhịn tránh
+- nuôi, nuôi nấng; bao (gái)
+- (thương nghiệp) có thường xuyên để bán
+- cứ, cứ để cho, bắt phải
+- không rời, ở lỳ, vẫn cứ, ở trong tình trạng
+- theo
+- (: at) bắt làm kiên trì, bắt làm bền bỉ
+- làm (lễ...), tổ chức (lễ kỷ niện...)
+- vẫn cứ, cứ, vẫn ở tình trạng tiếp tục
+- (thông tục) ở
+- đẻ được, giữ được, để dành được (không hỏng, không thổi...) (đồ ăn...)
+- (: to) giữ lấy, bám lấy, cứ theo, không rời xa
+- (nghĩa bóng) có thể để đấy, có thể đợi đấy
+- (: from,  off) rời xa, tránh xa; nhịn
+- (: at) làm kiên trì, làm bền bỉ (công việc gì...)
+- để xa ra, bắt ở xa ra; cất đi
+- làm chậm lại; chặn lại, cản lại, cầm lại
+- giấu không nói ra
+- đứng ở đằng sau, ở lại đằng sau
+- tránh xa ra
+- giữ không cho ra ngoài; phạt bắt (học sinh) ở lại sau giờ học
+- giữ cho (ngọn lửa) cháy đều
+- ở trong nhà, không ra ngoài
+- vẫn thân thiện, vẫn hoà thuận (với ai)
+- để cách xa ra, làm cho xa ra
+- ở cách xa ra, tránh ra
+- cứ vẫn tiếp tục
+- cứ để, cứ giữ
+- không cho vào; không để cho, không cho phép
+- đứng ngoài, không xen vào, không dính vào; tránh
+- duy trì, tiếp tục, không bỏ
+- bắt thức đêm, không cho đi ngủ
+- giữ vững tinh thần; không giảm, không hạ
+- (: with) theo kịp, ngang hàng với, không thua kém
+- sự nuôi thân, sự nuôi nấng (gia đình...); cái để nuôi thân, cái để nuôi nấng (gia đình...)
+- (từ Mỹ,nghĩa Mỹ) người giữ
+- (từ Mỹ,nghĩa Mỹ) nhà tù, nhà giam
+- (sử học) tháp, pháo đài, thành luỹ
+
+ketchup /'ketʃəp/
+- nước xốt cà chua
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
