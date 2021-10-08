@@ -1,5 +1,0 @@
-public class DictionaryApplication {
-    /*
-    runApplication
-     */
-}
