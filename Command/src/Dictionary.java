@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeMap;
 
@@ -25,8 +24,7 @@ public class Dictionary {
         System.out.println("\n");
         System.out.println("1. Menu");
         System.out.print("Nhap luu chon: ");
-        Scanner sc = new Scanner(System.in);
-        int exit = sc.nextInt();
+        int exit = Util.UserSelection();
         if (exit == 1) {
             return;
         }

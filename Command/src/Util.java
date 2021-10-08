@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Util {
     public static void cls() {
@@ -10,5 +11,20 @@ public class Util {
                 Runtime.getRuntime().exec("clear");
         } catch (IOException | InterruptedException ex) {
         }
+    }
+
+    public static void pause(int ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            System.err.format("IOException: %s%n", e);
+        }
+    }
+
+    public static int UserSelection() {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.close();
+        return n;
     }
 }

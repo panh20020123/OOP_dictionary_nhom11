@@ -1,7 +1,5 @@
 
 // import java.io.IOException;
-import java.util.Scanner;
-
 public class DictionaryCommandline {
     /*
      * dictionaryBasic // goi ham InsertFromCommandLine vs showAllWord
@@ -46,8 +44,6 @@ public class DictionaryCommandline {
      * 
      */
     public void dictionaryAdvanced() {
-        Scanner sc = new Scanner(System.in);
-
         // DicMana.insertFromFile();
         System.out.println("--- DICTIONARY ---");
         System.out.println("  1. Tra tu");
@@ -59,7 +55,7 @@ public class DictionaryCommandline {
         System.out.println();
         System.out.print(" Nhap lua chon: ");
 
-        int n = sc.nextInt();
+        int n = Util.UserSelection();
 
         switch (n) {
             case 1:

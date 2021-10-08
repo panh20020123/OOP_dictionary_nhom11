@@ -51,7 +51,7 @@ public class DictionaryManagement {
 
         System.out.println();
         System.out.println("Tu da duoc xoa...");
-        pause(1000);
+        Util.pause(1000);
 
     }
 
@@ -72,7 +72,7 @@ public class DictionaryManagement {
         System.out.println();
         System.out.println("Tu da duoc them...");
 
-        pause(1000);
+        Util.pause(1000);
 
     }
 
@@ -93,7 +93,7 @@ public class DictionaryManagement {
         System.out.println();
         System.out.println("Tu da duoc sua...");
 
-        pause(1000);
+        Util.pause(1000);
 
     }
 
@@ -116,13 +116,13 @@ public class DictionaryManagement {
 
     }
 
-    public static void pause(int ms) {
-        try {
-            Thread.sleep(ms);
-        } catch (InterruptedException e) {
-            System.err.format("IOException: %s%n", e);
-        }
-    }
+    // public static void Util.pause(int ms) {
+    // try {
+    // Thread.sleep(ms);
+    // } catch (InterruptedException e) {
+    // System.err.format("IOException: %s%n", e);
+    // }
+    // }
 
     // public static void cls() {
     // // Clears Screen in java
