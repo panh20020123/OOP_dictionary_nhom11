@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class DictionaryManagement {
     Dictionary dict = new Dictionary();
-    DictionaryCommandline dicC = new DictionaryCommandline();
+    DictionaryCommandline dicCmd = new DictionaryCommandline();
 
     Scanner screen = new Scanner(System.in);
 
@@ -33,9 +33,10 @@ public class DictionaryManagement {
                 wordDelete();
                 break;
             case 5:
-                dicC.showAllWords(dict);
+                dicCmd.showAllWords(dict);
                 break;
         }
+
         cls();
     }
 
@@ -51,7 +52,6 @@ public class DictionaryManagement {
         System.out.println("Tu da duoc xoa...");
         pause(1000);
 
-        sc.close();
     }
 
     private void wordInsert() {
@@ -72,7 +72,7 @@ public class DictionaryManagement {
         System.out.println("Tu da duoc them...");
 
         pause(1000);
-        sc.close();
+
     }
 
     private void wordFix() {
@@ -93,7 +93,7 @@ public class DictionaryManagement {
         System.out.println("Tu da duoc sua...");
 
         pause(1000);
-        sc.close();
+
     }
 
     public void wordLook() {
@@ -113,7 +113,6 @@ public class DictionaryManagement {
         else
             System.out.println(s);
 
-        sc.close();
     }
 
     public static void pause(int ms) {
