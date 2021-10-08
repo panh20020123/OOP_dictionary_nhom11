@@ -27,7 +27,7 @@ public class DictionaryManagement {
                 wordFix();
                 break;
             case 3:
-                wordInsert();
+                insertFromCommandLine();
                 break;
             case 4:
                 wordDelete();
@@ -40,7 +40,7 @@ public class DictionaryManagement {
         cls();
     }
 
-    private void wordDelete() {
+    public void wordDelete() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print(" Nhap tu can xoa: ");
@@ -54,7 +54,7 @@ public class DictionaryManagement {
 
     }
 
-    private void wordInsert() {
+    public void insertFromCommandLine() {
         Scanner sc = new Scanner(System.in);
 
         System.out.println(" Nhap tu can them:");
@@ -75,7 +75,7 @@ public class DictionaryManagement {
 
     }
 
-    private void wordFix() {
+    public void wordFix() {
         Scanner sc = new Scanner(System.in);
 
         System.out.println(" Nhap tu can sua:");
