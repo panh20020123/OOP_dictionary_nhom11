@@ -5,10 +5,10 @@ public class DictionaryManagement {
     Dictionary dict = new Dictionary();
     DictionaryCommandline dicC = new DictionaryCommandline();
 
-
     Scanner screen = new Scanner(System.in);
 
     public void Menu() {
+        System.out.flush();
         System.out.println("--- DICTIONARY ---");
         System.out.println("  1. Tra tu");
         System.out.println("  2. Sua tu");
@@ -45,8 +45,9 @@ public class DictionaryManagement {
         System.out.print("Nhap tu can xoa: ");
         String word = sc.nextLine();
         dict.deleteWord(word);
-    }
 
+        sc.close();
+    }
 
     private void wordInsert() {
         Scanner sc = new Scanner(System.in);
@@ -63,10 +64,10 @@ public class DictionaryManagement {
         dict.insertWord(word, wordE);
 
         System.out.println();
-        System.out.println("Tu da duoc them..." );
+        System.out.println("Tu da duoc them...");
 
         pause(1000);
-
+        sc.close();
     }
 
     private void wordFix() {
@@ -82,7 +83,7 @@ public class DictionaryManagement {
         String wordE = sc.nextLine();
 
         dict.fixWord(word, wordE);
-
+        sc.close();
     }
 
     public void wordLook() {
@@ -92,9 +93,12 @@ public class DictionaryManagement {
         String word = sc.nextLine();
         String s = dict.lookWord(word);
 
-        if(s == null)
+        if (s == null)
             System.out.println("Khong co du lieu");
-        else System.out.println(s);
+        else
+            System.out.println(s);
+
+        sc.close();
     }
 
     public static void pause(int ms) {
@@ -105,14 +109,15 @@ public class DictionaryManagement {
         }
     }
 
-    public static void cls(){
-        //Clears Screen in java
+    public static void cls() {
+        // Clears Screen in java
         try {
             if (System.getProperty("os.name").contains("Windows"))
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
             else
                 Runtime.getRuntime().exec("clear");
-        } catch (IOException | InterruptedException ex) {}
+        } catch (IOException | InterruptedException ex) {
+        }
     }
 
 }
