@@ -22,8 +22,8 @@ public class Dictionary {
             System.out.println(listdict.get(key).toString());
         }
         System.out.println("\n");
-        System.out.println("1. Menu");
-        System.out.print("Nhap luu chon: ");
+        System.out.println("  1. Menu");
+        System.out.print(" Nhap luu chon: ");
         int exit = Util.UserSelection();
         if (exit == 1) {
             return;
@@ -44,10 +44,16 @@ public class Dictionary {
         insertWord(word, wordE);
     }
 
+    // public String lookWord(String word) {
+    // if (!listdict.containsKey(word))
+    // return null;
+    // return listdict.get(word).toString();
+    // }
+
     public String lookWord(String word) {
         if (!listdict.containsKey(word))
             return null;
-        return listdict.get(word).toString();
+        return listdict.get(word).getWord_explain();
     }
 
 }

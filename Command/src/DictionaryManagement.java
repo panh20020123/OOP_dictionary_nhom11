@@ -85,6 +85,8 @@ public class DictionaryManagement {
         System.out.print(" English: ");
         String word = sc.nextLine();
 
+        System.out.println(" Tu dang co nghia: " + dict.lookWord(word));
+
         System.out.print(" Vietnamese: ");
         String wordE = sc.nextLine();
 
@@ -105,15 +107,17 @@ public class DictionaryManagement {
         String s = dict.lookWord(word);
 
         if (s == null)
-            System.out.println("Khong co du lieu");
+            System.out.println(" Khong co du lieu");
         else
-            System.out.println(s);
+            System.out.println("\n        Nghia cua tu: " + s);
 
-        if (s == null)
-            System.out.println("Khong co du lieu ... ");
-        else
-            System.out.println(s);
-
+        System.out.println("\n");
+        System.out.println("  1. Menu");
+        System.out.print(" Nhap luu chon: ");
+        int exit = Util.UserSelection();
+        if (exit == 1) {
+            return;
+        }
     }
 
     // public static void Util.pause(int ms) {

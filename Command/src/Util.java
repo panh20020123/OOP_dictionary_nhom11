@@ -1,6 +1,9 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * class dung cho cac function chung, dung duoc trong nhieu file khac
+ */
 public class Util {
     public static void cls() {
         // Clears sc in java
