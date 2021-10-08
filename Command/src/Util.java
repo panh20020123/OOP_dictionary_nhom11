@@ -24,7 +24,9 @@ public class Util {
     public static int UserSelection() {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        sc.close();
+        // if (sc.hasNext()) {
+        // sc.close();
+        // }
         return n;
     }
 }
