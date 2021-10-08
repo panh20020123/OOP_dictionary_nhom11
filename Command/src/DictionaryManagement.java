@@ -56,7 +56,7 @@ public class DictionaryManagement {
                 String fromText = sc.nextLine();
                 for (int i = 0; i < fromText.length(); i++) {
                     if (fromText.charAt(i) == ' ') {
-                        word = fromText.substring(0, i + 1);
+                        word = fromText.substring(0, i);
                         wordE = fromText.substring(i);
                         dict.insertWord(word, wordE);
                         break;
