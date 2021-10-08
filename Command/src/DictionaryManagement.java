@@ -40,17 +40,31 @@ public class DictionaryManagement {
     }
 
     public void insertFromFile() {
-        File text = new File("./src/dictionaries.txt");
-        Scanner sc = null;
+        // File text = new
+        // File("F:/2Study/2Nam2/CS/OOP/Dictionary/OOP_dictionary_nhom11/Command/src/dictionaries.txt");
+        // String path = new File("Command/src/dictionaries.txt").getAbsolutePath();
+        // File text = new File(path);
+        File text = new File("./Command/src/dictionaries.txt");
 
         try {
-            sc = new Scanner(text);
-            while (sc.hasNext()) {
-                String word = sc.next();
-                String wordE = sc.nextLine();
-                sc.nextLine();
-                dict.insertWord(word, wordE);
+            Scanner sc = new Scanner(text);
+            while (sc.hasNextLine()) {
+                String word;
+                String wordE;
+                // String word = sc.nextLine();
+                // String wordE = sc.nextLine();
+                String fromText = sc.nextLine();
+                for (int i = 0; i < fromText.length(); i++) {
+                    if (fromText.charAt(i) == ' ') {
+                        word = fromText.substring(0, i + 1);
+                        wordE = fromText.substring(i);
+                        dict.insertWord(word, wordE);
+                        break;
+                    }
+                }
+                // String s = sc.nextLine();
             }
+            sc.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
