@@ -37,14 +37,20 @@ public class DictionaryManagement {
                 dicC.showAllWords(dict);
                 break;
         }
+        cls();
     }
 
     private void wordDelete() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Nhap tu can xoa: ");
+        System.out.print(" Nhap tu can xoa: ");
         String word = sc.nextLine();
+
         dict.deleteWord(word);
+
+        System.out.println();
+        System.out.println("Tu da duoc xoa...");
+        pause(1000);
 
         sc.close();
     }
@@ -52,13 +58,13 @@ public class DictionaryManagement {
     private void wordInsert() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("  Nhap tu can them");
+        System.out.println(" Nhap tu can them:");
         System.out.println();
 
-        System.out.print("  English: ");
+        System.out.print(" English: ");
         String word = sc.nextLine();
 
-        System.out.print("  Vietnamese: ");
+        System.out.print(" Vietnamese: ");
         String wordE = sc.nextLine();
 
         dict.insertWord(word, wordE);
@@ -73,28 +79,38 @@ public class DictionaryManagement {
     private void wordFix() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("  Nhap tu can xoa");
+        System.out.println(" Nhap tu can sua:");
         System.out.println();
 
-        System.out.print("  English: ");
+        System.out.print(" English: ");
         String word = sc.nextLine();
 
-        System.out.println("  Vietnamese: ");
+        System.out.print(" Vietnamese: ");
         String wordE = sc.nextLine();
 
         dict.fixWord(word, wordE);
+
+        System.out.println();
+        System.out.println("Tu da duoc sua...");
+
+        pause(1000);
         sc.close();
     }
 
     public void wordLook() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Nhap tu can tra: ");
+        System.out.print(" Nhap tu can tra: ");
         String word = sc.nextLine();
         String s = dict.lookWord(word);
 
         if (s == null)
             System.out.println("Khong co du lieu");
+        else
+            System.out.println(s);
+
+        if (s == null)
+            System.out.println("Khong co du lieu ... ");
         else
             System.out.println(s);
 
