@@ -9,7 +9,7 @@ public class DictionaryCommandline {
      */
 
     DictionaryManagement DicMana = new DictionaryManagement();
-    Dictionary dictionary = new Dictionary();
+    // Dictionary dictionary = new Dictionary();
 
     /**
      * print all words from dictionary.
@@ -24,32 +24,21 @@ public class DictionaryCommandline {
      * goi ham InsertFromCommandLine va ham showAllWords.
      * 
      */
-    // public void dictionaryBasic() {
-    // Scanner sc = new Scanner(System.in);
-
-    // System.out.println("--- DICTIONARY ---");
-    // System.out.println(" 1. Tra tu");
-    // System.out.println(" 2. Them tu");
-    // System.out.println(" 3. In tu dien");
-    // System.out.println();
-    // System.out.print(" Nhap lua chon: ");
-
-    // int n = sc.nextInt();
-
-    // switch (n) {
-    // case 1:
-    // DicMana.dictionaryLookup();
-    // break;
-    // case 2:
-    // DicMana.insertFromCommandLine();
-    // break;
-    // case 3:
-    // showAllWords(dictionary);
-    // break;
-    // }
-
-    // cls();
-    // }
+    /*
+     * public void dictionaryBasic() { Scanner sc = new Scanner(System.in);
+     * 
+     * System.out.println("--- DICTIONARY ---"); System.out.println(" 1. Tra tu");
+     * System.out.println(" 2. Them tu"); System.out.println(" 3. In tu dien");
+     * System.out.println(); System.out.print(" Nhap lua chon: ");
+     * 
+     * int n = sc.nextInt();
+     * 
+     * switch (n) { case 1: DicMana.dictionaryLookup(); break; case 2:
+     * DicMana.insertFromCommandLine(); break; case 3: showAllWords(dictionary);
+     * break; }
+     * 
+     * cls(); }
+     */
 
     /**
      * goi ham InsertFromCommandLine , ham showAllWords , ham dictionaryLookup.
@@ -58,12 +47,14 @@ public class DictionaryCommandline {
     public void dictionaryAdvanced() {
         Scanner sc = new Scanner(System.in);
 
+        // DicMana.insertFromFile();
         System.out.println("--- DICTIONARY ---");
         System.out.println("  1. Tra tu");
         System.out.println("  2. Sua tu");
         System.out.println("  3. Them tu");
         System.out.println("  4. Xoa tu");
         System.out.println("  5. In tu dien");
+        System.out.println("  6. Thoat");
         System.out.println();
         System.out.print(" Nhap lua chon: ");
 
@@ -77,17 +68,19 @@ public class DictionaryCommandline {
                 DicMana.wordFix();
                 break;
             case 3:
-                // DicMana.insertFromFile();
+                DicMana.insertFromCommandLine();
                 break;
             case 4:
                 DicMana.wordDelete();
                 break;
             case 5:
-                showAllWords(dictionary);
+                showAllWords(DicMana.dict);
                 break;
+            case 6:
+                System.exit(0);
         }
 
-        cls();
+        // cls();
     }
 
     public static void cls() {

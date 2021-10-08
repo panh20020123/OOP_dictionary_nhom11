@@ -11,13 +11,12 @@ public class Word {
     }
 
     public String getWord_explain() {
-        return getWord_explain();
+        return Word_explain;
     }
 
     public void setWord_explain(String Word_explain) {
         this.Word_explain = Word_explain;
     }
-
 
     public Word(String Word_target, String Word_explain) {
         this.Word_explain = Word_explain;
@@ -26,9 +25,10 @@ public class Word {
 
     /**
      * print
+     * 
      * @return string
      */
     public String toString() {
-        return "| " + Word_target + "      | " + Word_explain;
+        return "| " + getWord_target() + "      | " + getWord_explain();
     }
 }
