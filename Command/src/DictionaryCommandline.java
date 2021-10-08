@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 // import java.io.IOException;
 public class DictionaryCommandline {
@@ -10,6 +13,9 @@ public class DictionaryCommandline {
      */
     public void showAllWords(Dictionary dict) {
         dict.printDictionary();
+    }
+    public void saveDict(Dictionary dict) {
+            dict.saveToFile();
     }
 
     /**
@@ -37,7 +43,7 @@ public class DictionaryCommandline {
      * 
      */
     public void dictionaryAdvanced() {
-        DicMana.insertFromFile();
+       // DicMana.insertFromFile();
 
         System.out.println("--- DICTIONARY ---");
         System.out.println("  1. Tra tu");
@@ -59,29 +65,27 @@ public class DictionaryCommandline {
                 DicMana.wordFix();
                 break;
             case 3:
-                DicMana.insertFromCommandLine();
+                System.out.println(" 1. Them tu ban phim");
+                System.out.println(" 2. Them tu File");
+                System.out.print(" Nhap lua chon: ");
+                int x = Util.UserSelection();
+
+                if (x == 1)  DicMana.insertFromCommandLine();
+                else DicMana.insertFromFile();
+
                 break;
             case 4:
                 DicMana.wordDelete();
-                // break;
+                break;
             case 5:
                 showAllWords(DicMana.dict);
                 break;
             case 6:
+                saveDict(DicMana.dict);
                 System.exit(0);
         }
 
-        Util.cls();
+       // Util.cls();
     }
 
-    // public static void cls() {
-    // // Clears sc in java
-    // try {
-    // if (System.getProperty("os.name").contains("Windows"))
-    // new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-    // else
-    // Runtime.getRuntime().exec("clear");
-    // } catch (IOException | InterruptedException ex) {
-    // }
-    // }
 }
