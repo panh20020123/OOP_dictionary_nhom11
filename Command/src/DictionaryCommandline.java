@@ -24,32 +24,32 @@ public class DictionaryCommandline {
      * goi ham InsertFromCommandLine va ham showAllWords.
      * 
      */
-    public void dictionaryBasic() {
-        Scanner sc = new Scanner(System.in);
+    // public void dictionaryBasic() {
+    // Scanner sc = new Scanner(System.in);
 
-        System.out.println("--- DICTIONARY ---");
-        System.out.println("  1. Tra tu");
-        System.out.println("  2. Them tu");
-        System.out.println("  3. In tu dien");
-        System.out.println();
-        System.out.print(" Nhap lua chon: ");
+    // System.out.println("--- DICTIONARY ---");
+    // System.out.println(" 1. Tra tu");
+    // System.out.println(" 2. Them tu");
+    // System.out.println(" 3. In tu dien");
+    // System.out.println();
+    // System.out.print(" Nhap lua chon: ");
 
-        int n = sc.nextInt();
+    // int n = sc.nextInt();
 
-        switch (n) {
-            case 1:
-                DicMana.dictionaryLookup();
-                break;
-            case 2:
-                DicMana.insertFromCommandLine();
-                break;
-            case 3:
-                showAllWords(dictionary);
-                break;
-        }
+    // switch (n) {
+    // case 1:
+    // DicMana.dictionaryLookup();
+    // break;
+    // case 2:
+    // DicMana.insertFromCommandLine();
+    // break;
+    // case 3:
+    // showAllWords(dictionary);
+    // break;
+    // }
 
-        cls();
-    }
+    // cls();
+    // }
 
     /**
      * goi ham InsertFromCommandLine , ham showAllWords , ham dictionaryLookup.
