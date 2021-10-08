@@ -1,45 +1,9 @@
-
-// import java.io.IOException;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class DictionaryManagement {
     Dictionary dict = new Dictionary();
-    // DictionaryCommandline dicCmd = new DictionaryCommandline();
-
-    // Scanner screen = new Scanner(System.in);
-
-    // public void Menu() {
-    // System.out.println("--- DICTIONARY ---");
-    // System.out.println(" 1. Tra tu");
-    // System.out.println(" 2. Sua tu");
-    // System.out.println(" 3. Them tu");
-    // System.out.println(" 4. Xoa tu");
-    // System.out.println(" 5. In tu dien");
-    // System.out.println();
-    // System.out.print(" Nhap lua chon: ");
-
-    // int n = screen.nextInt();
-
-    // switch (n) {
-    // case 1:
-    // dictionaryLookup();
-    // break;
-    // case 2:
-    // wordFix();
-    // break;
-    // case 3:
-    // insertFromCommandLine();
-    // break;
-    // case 4:
-    // wordDelete();
-    // break;
-    // case 5:
-    // dicCmd.showAllWords(dict);
-    // break;
-    // }
-
-    // cls();
-    // }
 
     public void wordDelete() {
         Scanner sc = new Scanner(System.in);
@@ -73,6 +37,23 @@ public class DictionaryManagement {
         System.out.println("Tu da duoc them...");
 
         Util.pause(1000);
+    }
+
+    public void insertFromFile() {
+        File text = new File("./src/dictionaries.txt");
+        Scanner sc = null;
+
+        try {
+            sc = new Scanner(text);
+            while (sc.hasNext()) {
+                String word = sc.next();
+                String wordE = sc.nextLine();
+                sc.nextLine();
+                dict.insertWord(word, wordE);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -119,24 +100,5 @@ public class DictionaryManagement {
             return;
         }
     }
-
-    // public static void Util.pause(int ms) {
-    // try {
-    // Thread.sleep(ms);
-    // } catch (InterruptedException e) {
-    // System.err.format("IOException: %s%n", e);
-    // }
-    // }
-
-    // public static void cls() {
-    // // Clears Screen in java
-    // try {
-    // if (System.getProperty("os.name").contains("Windows"))
-    // new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-    // else
-    // Runtime.getRuntime().exec("clear");
-    // } catch (IOException | InterruptedException ex) {
-    // }
-    // }
 
 }

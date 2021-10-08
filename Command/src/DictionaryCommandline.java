@@ -1,14 +1,7 @@
 
 // import java.io.IOException;
 public class DictionaryCommandline {
-    /*
-     * dictionaryBasic // goi ham InsertFromCommandLine vs showAllWord
-     * dictionaryAdvanced// goi ham InsetFromFile, showAllWords, dictionaryLookup
-     * dictionarySearcher
-     */
-
     DictionaryManagement DicMana = new DictionaryManagement();
-    // Dictionary dictionary = new Dictionary();
 
     /**
      * print all words from dictionary.
@@ -44,7 +37,8 @@ public class DictionaryCommandline {
      * 
      */
     public void dictionaryAdvanced() {
-        // DicMana.insertFromFile();
+        DicMana.insertFromFile();
+
         System.out.println("--- DICTIONARY ---");
         System.out.println("  1. Tra tu");
         System.out.println("  2. Sua tu");

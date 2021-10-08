@@ -44,12 +44,6 @@ public class Dictionary {
         insertWord(word, wordE);
     }
 
-    // public String lookWord(String word) {
-    // if (!listdict.containsKey(word))
-    // return null;
-    // return listdict.get(word).toString();
-    // }
-
     public String lookWord(String word) {
         if (!listdict.containsKey(word))
             return null;
