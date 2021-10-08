@@ -1,4 +1,5 @@
-import java.io.IOException;
+
+// import java.io.IOException;
 import java.util.Scanner;
 
 public class DictionaryCommandline {
@@ -37,7 +38,7 @@ public class DictionaryCommandline {
      * DicMana.insertFromCommandLine(); break; case 3: showAllWords(dictionary);
      * break; }
      * 
-     * cls(); }
+     * Util.cls(); }
      */
 
     /**
@@ -72,7 +73,7 @@ public class DictionaryCommandline {
                 break;
             case 4:
                 DicMana.wordDelete();
-                break;
+                // break;
             case 5:
                 showAllWords(DicMana.dict);
                 break;
@@ -80,17 +81,17 @@ public class DictionaryCommandline {
                 System.exit(0);
         }
 
-        // cls();
+        Util.cls();
     }
 
-    public static void cls() {
-        // Clears sc in java
-        try {
-            if (System.getProperty("os.name").contains("Windows"))
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            else
-                Runtime.getRuntime().exec("clear");
-        } catch (IOException | InterruptedException ex) {
-        }
-    }
+    // public static void cls() {
+    // // Clears sc in java
+    // try {
+    // if (System.getProperty("os.name").contains("Windows"))
+    // new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+    // else
+    // Runtime.getRuntime().exec("clear");
+    // } catch (IOException | InterruptedException ex) {
+    // }
+    // }
 }

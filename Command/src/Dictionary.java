@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeMap;
 
@@ -9,6 +10,8 @@ public class Dictionary {
     }
 
     public void printDictionary() {
+        Util.cls();
+        System.out.println("--- DICTIONARY ---");
         System.out.println("No   | English      | Vietnamese ");
 
         Set<String> keySet = listdict.keySet();
@@ -18,6 +21,14 @@ public class Dictionary {
             i++;
             System.out.print(i + " ");
             System.out.println(listdict.get(key).toString());
+        }
+        System.out.println("\n");
+        System.out.println("1. Menu");
+        System.out.print("Nhap luu chon: ");
+        Scanner sc = new Scanner(System.in);
+        int exit = sc.nextInt();
+        if (exit == 1) {
+            return;
         }
     }
 
