@@ -8,7 +8,6 @@ public class DictionaryManagement {
     Scanner screen = new Scanner(System.in);
 
     public void Menu() {
-        System.out.flush();
         System.out.println("--- DICTIONARY ---");
         System.out.println("  1. Tra tu");
         System.out.println("  2. Sua tu");
