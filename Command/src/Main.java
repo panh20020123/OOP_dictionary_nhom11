@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        DictionaryManagement a = new DictionaryManagement();
+        DictionaryCommandline app = new DictionaryCommandline();
         while (true) {
-            a.Menu();
+            app.dictionaryAdvanced();
         }
     }
 }

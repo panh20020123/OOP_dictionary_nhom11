@@ -1,44 +1,45 @@
-import java.io.IOException;
+
+// import java.io.IOException;
 import java.util.Scanner;
 
 public class DictionaryManagement {
     Dictionary dict = new Dictionary();
-    DictionaryCommandline dicCmd = new DictionaryCommandline();
+    // DictionaryCommandline dicCmd = new DictionaryCommandline();
 
-    Scanner screen = new Scanner(System.in);
+    // Scanner screen = new Scanner(System.in);
 
-    public void Menu() {
-        System.out.println("--- DICTIONARY ---");
-        System.out.println("  1. Tra tu");
-        System.out.println("  2. Sua tu");
-        System.out.println("  3. Them tu");
-        System.out.println("  4. Xoa tu");
-        System.out.println("  5. In tu dien");
-        System.out.println();
-        System.out.print(" Nhap lua chon: ");
+    // public void Menu() {
+    // System.out.println("--- DICTIONARY ---");
+    // System.out.println(" 1. Tra tu");
+    // System.out.println(" 2. Sua tu");
+    // System.out.println(" 3. Them tu");
+    // System.out.println(" 4. Xoa tu");
+    // System.out.println(" 5. In tu dien");
+    // System.out.println();
+    // System.out.print(" Nhap lua chon: ");
 
-        int n = screen.nextInt();
+    // int n = screen.nextInt();
 
-        switch (n) {
-            case 1:
-                wordLook();
-                break;
-            case 2:
-                wordFix();
-                break;
-            case 3:
-                insertFromCommandLine();
-                break;
-            case 4:
-                wordDelete();
-                break;
-            case 5:
-                dicCmd.showAllWords(dict);
-                break;
-        }
+    // switch (n) {
+    // case 1:
+    // dictionaryLookup();
+    // break;
+    // case 2:
+    // wordFix();
+    // break;
+    // case 3:
+    // insertFromCommandLine();
+    // break;
+    // case 4:
+    // wordDelete();
+    // break;
+    // case 5:
+    // dicCmd.showAllWords(dict);
+    // break;
+    // }
 
-        cls();
-    }
+    // cls();
+    // }
 
     public void wordDelete() {
         Scanner sc = new Scanner(System.in);
@@ -96,7 +97,7 @@ public class DictionaryManagement {
 
     }
 
-    public void wordLook() {
+    public void dictionaryLookup() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print(" Nhap tu can tra: ");
@@ -123,15 +124,15 @@ public class DictionaryManagement {
         }
     }
 
-    public static void cls() {
-        // Clears Screen in java
-        try {
-            if (System.getProperty("os.name").contains("Windows"))
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            else
-                Runtime.getRuntime().exec("clear");
-        } catch (IOException | InterruptedException ex) {
-        }
-    }
+    // public static void cls() {
+    // // Clears Screen in java
+    // try {
+    // if (System.getProperty("os.name").contains("Windows"))
+    // new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+    // else
+    // Runtime.getRuntime().exec("clear");
+    // } catch (IOException | InterruptedException ex) {
+    // }
+    // }
 
 }
