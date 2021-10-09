@@ -1,7 +1,5 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeMap;
 
@@ -74,6 +72,7 @@ public class Dictionary {
             }
             // Bước 3: Đóng luồng
             fw.close();
+
         } catch (IOException ex) {
             System.out.println("Loi ghi file: " + ex);
         }

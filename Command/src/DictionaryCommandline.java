@@ -73,6 +73,7 @@ public class DictionaryCommandline {
                 else
                     DicMana.insertFromFile();
 
+                saveDict(DicMana.dict);
                 break;
             case 4:
                 DicMana.wordDelete();
