@@ -1,8 +1,3 @@
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-
-// import java.io.IOException;
 public class DictionaryCommandline {
     DictionaryManagement DicMana = new DictionaryManagement();
 
@@ -14,8 +9,9 @@ public class DictionaryCommandline {
     public void showAllWords(Dictionary dict) {
         dict.printDictionary();
     }
+
     public void saveDict(Dictionary dict) {
-            dict.saveToFile();
+        dict.saveToFile();
     }
 
     /**
@@ -43,7 +39,8 @@ public class DictionaryCommandline {
      * 
      */
     public void dictionaryAdvanced() {
-       // DicMana.insertFromFile();
+        // DicMana.insertFromFile();
+        Util.cls();
 
         System.out.println("--- DICTIONARY ---");
         System.out.println("  1. Tra tu");
@@ -63,6 +60,7 @@ public class DictionaryCommandline {
                 break;
             case 2:
                 DicMana.wordFix();
+                saveDict(DicMana.dict);
                 break;
             case 3:
                 System.out.println(" 1. Them tu ban phim");
@@ -70,22 +68,24 @@ public class DictionaryCommandline {
                 System.out.print(" Nhap lua chon: ");
                 int x = Util.UserSelection();
 
-                if (x == 1)  DicMana.insertFromCommandLine();
-                else DicMana.insertFromFile();
+                if (x == 1)
+                    DicMana.insertFromCommandLine();
+                else
+                    DicMana.insertFromFile();
 
                 break;
             case 4:
                 DicMana.wordDelete();
+                saveDict(DicMana.dict);
                 break;
             case 5:
                 showAllWords(DicMana.dict);
                 break;
             case 6:
-                saveDict(DicMana.dict);
                 System.exit(0);
         }
 
-       // Util.cls();
+        Util.cls();
     }
 
 }
