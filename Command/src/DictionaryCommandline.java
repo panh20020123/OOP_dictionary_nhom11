@@ -10,6 +10,11 @@ public class DictionaryCommandline {
         dict.printDictionary();
     }
 
+    /**
+     * save to dictioanries.txt.
+     * 
+     * @param dict
+     */
     public void saveDict(Dictionary dict) {
         dict.saveToFile();
     }
