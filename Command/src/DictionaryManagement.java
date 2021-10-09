@@ -110,7 +110,14 @@ public class DictionaryManagement {
 
         if (s == null) {
             // dictionarySearcher(word);
-            System.out.println("// co muon them tu?");
+            System.out.print(
+                    "\nKhong tim thay tu trong tu dien.\nBan co muon them tu?\n 1. Them tu\n 2. Ve Menu\n Nhap lua chon: ");
+            int action = Util.UserSelection();
+            if (action == 1) {
+                insertFromCommandLine();
+            } else {
+                return;
+            }
         } else {
             System.out.println("      Nghia cua tu: " + s);
             System.out.println("\n");
