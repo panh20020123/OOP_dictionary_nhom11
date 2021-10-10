@@ -81,6 +81,7 @@ public class DictionaryCommandline {
                 break;
             case 6:
                 saveDict(DicMana.dict);
+                Util.cls();
                 System.exit(0);
         }
 

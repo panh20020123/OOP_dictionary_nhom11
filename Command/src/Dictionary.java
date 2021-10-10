@@ -39,16 +39,18 @@ public class Dictionary {
 
     public void printDictionary() {
         Util.cls();
-        System.out.println("--- DICTIONARY ---");
-        System.out.println("No   | English      | Vietnamese ");
+        System.out.println("        --- DICTIONARY ---");
+        // System.out.println("No | English | Vietnamese ");
+        System.out.printf("%-5s| %-20s | %s%n", "No", "English", "Vietnamese");
 
         Set<String> keySet = listdict.keySet();
         int i = 0;
 
         for (String key : keySet) {
             i++;
-            System.out.print(i + " ");
-            System.out.println(listdict.get(key).toString());
+            // System.out.print(i + " ");
+            // System.out.println(listdict.get(key).toString());
+            System.out.printf("%-5d| %-20s | %-20s%n", i, key, listdict.get(key).getWord_explain());
         }
         System.out.println("\n");
         System.out.println("  1. Ve Menu");
@@ -68,7 +70,7 @@ public class Dictionary {
 
             Set<String> keySet = listdict.keySet();
             for (String key : keySet) {
-                fw.write(key + " " + listdict.get(key).getWord_explain() + '\n' + '\n');
+                fw.write(key + "\t" + listdict.get(key).getWord_explain() + '\n' + '\n');
             }
 
             fw.close();
@@ -128,9 +130,11 @@ public class Dictionary {
                 if (action == 1) {
                     System.out.print("Chon so thu tu cua tu de tra: ");
                     return containsInput.get(Util.UserSelection() - 1);
-                } else return "";
+                } else
+                    return "";
 
-            } else return "";
+            } else
+                return "";
             // return kq;
         }
         return word;

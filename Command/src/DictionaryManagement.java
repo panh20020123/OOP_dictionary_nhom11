@@ -55,9 +55,9 @@ public class DictionaryManagement {
                 String word;
                 String wordE;
                 for (int i = 0; i < fromText.length(); i++) {
-                    if (fromText.charAt(i) == ' ') {
+                    if (fromText.charAt(i) == '\t') {
                         word = fromText.substring(0, i);
-                        wordE = fromText.substring(i);
+                        wordE = fromText.substring(i + 1);
 
                         dict.insertWord(word, wordE);
                         break;
@@ -106,17 +106,17 @@ public class DictionaryManagement {
 
         String word = dictionarySearcher(sc.nextLine());
 
-        if(!word.equals("")) {
-                System.out.println("      Nghia cua tu " + word +": "+ dict.lookWord(word));
-                System.out.println("\n");
-        }
-        else {
+        if (!word.equals("")) {
+            System.out.println("      Nghia cua tu " + word + ": " + dict.lookWord(word));
+            System.out.println("\n");
+        } else {
             System.out.print(
                     "\nKhong tim thay tu trong tu dien.\nBan co muon them tu?\n 1. Them tu\n 2. Ve Menu\n Nhap lua chon: ");
             int action = Util.UserSelection();
             if (action == 1) {
                 insertFromCommandLine();
-            } else return;
+            } else
+                return;
         }
         Util.pause(1000);
 
