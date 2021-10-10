@@ -10,11 +10,6 @@ public class DictionaryCommandline {
         dict.printDictionary();
     }
 
-    /**
-     * save to dictioanries.txt.
-     * 
-     * @param dict
-     */
     public void saveDict(Dictionary dict) {
         dict.saveToFile();
     }
@@ -77,17 +72,15 @@ public class DictionaryCommandline {
                     DicMana.insertFromCommandLine();
                 else
                     DicMana.insertFromFile();
-
-                saveDict(DicMana.dict);
                 break;
             case 4:
                 DicMana.wordDelete();
-                saveDict(DicMana.dict);
                 break;
             case 5:
                 showAllWords(DicMana.dict);
                 break;
             case 6:
+                saveDict(DicMana.dict);
                 System.exit(0);
         }
 

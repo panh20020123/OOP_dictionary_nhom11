@@ -44,10 +44,10 @@ public class DictionaryManagement {
             Scanner sc = new Scanner(System.in);
 
             String s = sc.nextLine();
-            // Bước 1: Tạo đối tượng luồng và liên kết nguồn dữ liệu
+
             File f = new File("./Command/src/" + s + ".txt");
             FileReader fr = new FileReader(f);
-            // Bước 2: Đọc dữ liệu
+
             BufferedReader br = new BufferedReader(fr);
 
             String fromText;
@@ -65,7 +65,7 @@ public class DictionaryManagement {
                 }
                 br.readLine();
             }
-            // Bước 3: Đóng luồng
+
             fr.close();
             br.close();
         } catch (Exception ex) {
@@ -103,24 +103,20 @@ public class DictionaryManagement {
     public void dictionaryLookup() {
         Scanner sc = new Scanner(System.in);
         System.out.print(" Nhap tu can tra: ");
-        // String word = sc.nextLine();
-        String word = dictionarySearcher(sc.nextLine());
-        String s = dict.lookWord(word);
-        System.out.println("\n word: " + word);
 
-        if (s == null) {
-            // dictionarySearcher(word);
+        String word = dictionarySearcher(sc.nextLine());
+
+        if(!word.equals("")) {
+                System.out.println("      Nghia cua tu " + word +": "+ dict.lookWord(word));
+                System.out.println("\n");
+        }
+        else {
             System.out.print(
                     "\nKhong tim thay tu trong tu dien.\nBan co muon them tu?\n 1. Them tu\n 2. Ve Menu\n Nhap lua chon: ");
             int action = Util.UserSelection();
             if (action == 1) {
                 insertFromCommandLine();
-            } else {
-                return;
-            }
-        } else {
-            System.out.println("      Nghia cua tu: " + s);
-            System.out.println("\n");
+            } else return;
         }
         Util.pause(1000);
 
@@ -134,14 +130,7 @@ public class DictionaryManagement {
     }
 
     public String dictionarySearcher(String word) {
-        String s = dict.searcher(word);
-        if (s == "")
-            System.out.println("....");
-        // else
-        // System.out.println(s);
-        // dict.searcher(word);
-        // System.out.println();
-        return s;
+        return dict.searcher(word);
     }
 
 }

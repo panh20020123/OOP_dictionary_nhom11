@@ -9,10 +9,10 @@ public class Dictionary {
     public Dictionary() {
         listdict = new TreeMap<String, Word>();
         try {
-            // Bước 1: Tạo đối tượng luồng và liên kết nguồn dữ liệu
+
             File f = new File("./src/dictionaries.txt");
             FileReader fr = new FileReader(f);
-            // Bước 2: Đọc dữ liệu
+
             BufferedReader br = new BufferedReader(fr);
 
             String fromText;
@@ -29,7 +29,7 @@ public class Dictionary {
                 }
                 br.readLine();
             }
-            // Bước 3: Đóng luồng
+
             fr.close();
             br.close();
         } catch (Exception ex) {
@@ -62,15 +62,15 @@ public class Dictionary {
     public void saveToFile() {
 
         try {
-            // Bước 1: Tạo đối tượng luồng và liên kết nguồn dữ liệu
+
             File f = new File("./Command/src/dictionaries.txt");
             FileWriter fw = new FileWriter(f);
-            // Bước 2: Ghi dữ liệu
+
             Set<String> keySet = listdict.keySet();
             for (String key : keySet) {
                 fw.write(key + " " + listdict.get(key).getWord_explain() + '\n' + '\n');
             }
-            // Bước 3: Đóng luồng
+
             fw.close();
 
         } catch (IOException ex) {
@@ -93,8 +93,6 @@ public class Dictionary {
     }
 
     public String lookWord(String word) {
-        if (!listdict.containsKey(word))
-            return null;
         return listdict.get(word).getWord_explain();
     }
 
@@ -120,20 +118,19 @@ public class Dictionary {
                     break;
             }
             if (containsInput.size() > 0) {
-                System.out.println("Co phai ban dinh tim: ");
+                System.out.println("Co phai ban muon tim: ");
                 for (int i = 0; i < containsInput.size(); i++) {
                     System.out.println((i + 1) + ". " + containsInput.get(i));
                 }
-                System.out.print(" \n 1. Chon tu de tra \n 2. Ve Menu \n Nhap lua chon: ");
+                System.out.print(" \n 1. Chon tu de tra \n 2. Thoat \n Nhap lua chon: ");
                 int action = Util.UserSelection();
+
                 if (action == 1) {
                     System.out.print("Chon so thu tu cua tu de tra: ");
-                    // kq += lookWord(containsInput.get(Util.UserSelection() - 1));
-                    // kq += containsInput.get(Util.UserSelection() - 1);
-                    word = containsInput.get(Util.UserSelection() - 1);
-                }
-            } else
-                return word;
+                    return containsInput.get(Util.UserSelection() - 1);
+                } else return "";
+
+            } else return "";
             // return kq;
         }
         return word;
