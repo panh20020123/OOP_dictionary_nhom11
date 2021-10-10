@@ -39,13 +39,21 @@ public class DictionaryManagement {
     }
 
     public void insertFromFile() {
+        System.out.print("Nhap file muon them: ");
+        Scanner sc = new Scanner(System.in);
+
+        String s = sc.nextLine();
         try {
-            System.out.print("Nhap file muon them: ");
-            Scanner sc = new Scanner(System.in);
+            File f = new File("Command/src/" + s + ".txt");
+            // System.out.println(f.getAbsolutePath());
+            // Util.pause(5000);
 
-            String s = sc.nextLine();
-
-            File f = new File("./Command/src/" + s + ".txt");
+            if (!f.isFile()) {
+                // System.out.println("nope");
+                f = new File(s + ".txt");
+            }
+            // System.out.println(f.getAbsolutePath());
+            // Util.pause(5000);
             FileReader fr = new FileReader(f);
 
             BufferedReader br = new BufferedReader(fr);
@@ -105,11 +113,8 @@ public class DictionaryManagement {
         System.out.print(" Nhap tu can tra: ");
 
         String word = dictionarySearcher(sc.nextLine());
-
-        if (!word.equals("")) {
-            System.out.println("      Nghia cua tu " + word + ": " + dict.lookWord(word));
-            System.out.println("\n");
-        } else {
+        System.out.println(word);
+        if (word.equals("")) {
             System.out.print(
                     "\nKhong tim thay tu trong tu dien.\nBan co muon them tu?\n 1. Them tu\n 2. Ve Menu\n Nhap lua chon: ");
             int action = Util.UserSelection();
@@ -117,6 +122,11 @@ public class DictionaryManagement {
                 insertFromCommandLine();
             } else
                 return;
+        } else if (word == "2.exit") {
+            return;
+        } else {
+            System.out.println("\n      Nghia cua tu " + word + ": " + dict.lookWord(word));
+            System.out.println("\n");
         }
         Util.pause(1000);
 

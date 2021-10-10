@@ -10,7 +10,11 @@ public class Dictionary {
         listdict = new TreeMap<String, Word>();
         try {
 
-            File f = new File("./src/dictionaries.txt");
+            File f = new File("Command/src/dictionaries.txt");
+
+            if (!f.isFile()) {
+                f = new File("dictionaries.txt");
+            }
             FileReader fr = new FileReader(f);
 
             BufferedReader br = new BufferedReader(fr);
@@ -20,9 +24,9 @@ public class Dictionary {
                 String word;
                 String wordE;
                 for (int i = 0; i < fromText.length(); i++) {
-                    if (fromText.charAt(i) == ' ') {
+                    if (fromText.charAt(i) == '\t') {
                         word = fromText.substring(0, i);
-                        wordE = fromText.substring(i);
+                        wordE = fromText.substring(i + 1);
                         insertWord(word, wordE);
                         break;
                     }
@@ -65,7 +69,10 @@ public class Dictionary {
 
         try {
 
-            File f = new File("./Command/src/dictionaries.txt");
+            File f = new File("Command/src/dictionaries.txt");
+            if (!f.isFile()) {
+                f = new File("dictionaries.txt");
+            }
             FileWriter fw = new FileWriter(f);
 
             Set<String> keySet = listdict.keySet();
@@ -131,7 +138,7 @@ public class Dictionary {
                     System.out.print("Chon so thu tu cua tu de tra: ");
                     return containsInput.get(Util.UserSelection() - 1);
                 } else
-                    return "";
+                    return "2.exit";
 
             } else
                 return "";
