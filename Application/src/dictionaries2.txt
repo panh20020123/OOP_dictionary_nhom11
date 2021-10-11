@@ -1,0 +1,11 @@
+fruit	trai cay
+
+juice	nuoc ep trai cay
+
+smoothies	sinh to
+
+tea	tra
+
+beer	bia
+
+wine	ruou
