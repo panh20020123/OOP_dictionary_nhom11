@@ -12,13 +12,17 @@ ability	nang luc, kha nang (lam viec gi)
 
 able	co nang luc, co tai
 
+banana	chuoi
+
 bean	dau
+
+beer	bia
 
 bicycle	xe dap
 
 big	to, lon
 
-billionaire	(tu My,nghĩa My) nha ti phu
+billionaire	(tu My,nghia My) nha ti phu
 
 binary	doi, nhi nguyen, nhi phan
 
@@ -68,13 +72,15 @@ fire	lua, anh lua
 
 footprint	dau chan, vet chan
 
+fruit	trai cay
+
 full	day, day dủ, nhieu, tran tre, tran ngap, chan chua
 
 grace	ve duyen dang, ve yeu kieu; ve uyen chuyen
 
 guardian	nguoi bao ve
 
-hack	bua, riu; cuoc chim (của cong nhan mo)
+hack	bua, riu; cuoc chim (cua cong nhan mo)
 
 here	day, o day, o chỗ nay
 
@@ -94,5 +100,15 @@ invisibility	tinh khong the trong thay duoc, tinh vo hinh
 
 joy	su vui mung, su han hoan, su vui suong
 
+juice	nuoc ep trai cay
+
 ketchup	nuoc xot ca chua
+
+monkey	khi
+
+smoothies	sinh to
+
+tea	tra
+
+wine	ruou
 
