@@ -1,11 +1,11 @@
-fruit trái cây
+fruit	trai cay
 
-juice nước ép trái cây
+juice	nuoc ep trai cay
 
-smoothies sinh tố
+smoothies	sinh to
 
-tea trà
+tea	tra
 
-beer bia
+beer	bia
 
-wine rượu
+wine	ruou

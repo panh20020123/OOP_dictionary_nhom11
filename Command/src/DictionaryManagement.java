@@ -113,7 +113,7 @@ public class DictionaryManagement {
         System.out.print(" Nhap tu can tra: ");
 
         String word = dictionarySearcher(sc.nextLine());
-        System.out.println(word);
+        // System.out.println(word);
         if (word.equals("")) {
             System.out.print(
                     "\nKhong tim thay tu trong tu dien.\nBan co muon them tu?\n 1. Them tu\n 2. Ve Menu\n Nhap lua chon: ");
