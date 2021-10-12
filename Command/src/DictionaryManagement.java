@@ -9,11 +9,14 @@ public class DictionaryManagement {
 
         System.out.print(" Nhap tu can xoa: ");
         String word = sc.nextLine();
-
-        dict.deleteWord(word);
-
-        System.out.println();
-        System.out.println("Tu da duoc xoa...");
+	if (word == null)
+            System.out.println("Khong co du lieu ");
+        else {
+            dict.deleteWord(word);
+	    System.out.println();
+            System.out.println("Tu da duoc xoa...");
+        }
+        
         Util.pause(1000);
 
     }
