@@ -102,7 +102,9 @@ public class Dictionary {
     }
 
     public String lookWord(String word) {
-        return listdict.get(word).getWord_explain();
+        if (listdict.containsKey(word))
+            return listdict.get(word).getWord_explain();
+        return null;
     }
 
     public String searcher(String word) {

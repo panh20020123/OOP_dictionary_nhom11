@@ -90,15 +90,16 @@ public class DictionaryManagement {
         System.out.print(" English: ");
         String word = sc.nextLine();
 
-        if (dict.lookWord(word) == null)
+        String wordE = dict.lookWord(word);
+        if (wordE == null)
             System.out.println("Khong co du lieu ");
         else {
-            System.out.println(" Tu dang co nghia: " + dict.lookWord(word));
+            System.out.println(" Tu dang co nghia: " + wordE);
 
             System.out.print(" Vietnamese: ");
-            String wordE = sc.nextLine();
+            String wordEn = sc.nextLine();
 
-            dict.fixWord(word, wordE);
+            dict.fixWord(word, wordEn);
 
             System.out.println();
             System.out.println("Tu da duoc sua...");
