@@ -5,18 +5,19 @@ public class DictionaryManagement {
     Dictionary dict = new Dictionary();
 
     public void wordDelete() {
-        Scanner sc = new Scanner(System.in);
+       Scanner sc = new Scanner(System.in);
 
         System.out.print(" Nhap tu can xoa: ");
         String word = sc.nextLine();
-	if (word == null)
+        String wordE = dict.lookWord(word);
+	if (wordE == null)
             System.out.println("Khong co du lieu ");
         else {
             dict.deleteWord(word);
-	    System.out.println();
+		System.out.println();
             System.out.println("Tu da duoc xoa...");
         }
-        
+
         Util.pause(1000);
 
     }
