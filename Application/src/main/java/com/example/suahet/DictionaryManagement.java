@@ -1,3 +1,4 @@
+package com.example.suahet;
 import java.io.*;
 import java.util.Scanner;
 

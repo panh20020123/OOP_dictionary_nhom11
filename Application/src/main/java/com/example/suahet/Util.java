@@ -1,3 +1,5 @@
+package com.example.suahet;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -33,3 +35,4 @@ public class Util {
         return n;
     }
 }
+

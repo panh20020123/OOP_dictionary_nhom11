@@ -1,3 +1,4 @@
+package com.example.suahet;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Set;
@@ -10,10 +11,10 @@ public class Dictionary {
         listdict = new TreeMap<String, Word>();
         try {
 
-            File f = new File("Command/src/dictionaries.txt");
+            File f = new File("C:\\Users\\admin\\OneDrive\\Máy tính\\OOP_dictionary_nhom11.1\\Command\\src\\dictionaries.txt");
 
             if (!f.isFile()) {
-                f = new File("dictionaries.txt");
+                f = new File("C:\\Users\\admin\\OneDrive\\Máy tính\\OOP_dictionary_nhom11.1\\Command\\src\\dictionaries.txt");
             }
             FileReader fr = new FileReader(f);
 
@@ -69,9 +70,9 @@ public class Dictionary {
 
         try {
 
-            File f = new File("Command/src/dictionaries.txt");
+            File f = new File("C:\\Users\\admin\\OneDrive\\Máy tính\\OOP_dictionary_nhom11.1\\Command\\src\\dictionaries.txt");
             if (!f.isFile()) {
-                f = new File("dictionaries.txt");
+                f = new File("C:\\Users\\admin\\OneDrive\\Máy tính\\OOP_dictionary_nhom11.1\\Command\\src\\dictionaries.txt");
             }
             FileWriter fw = new FileWriter(f);
 
@@ -102,6 +103,8 @@ public class Dictionary {
     }
 
     public String lookWord(String word) {
+        if (!listdict.containsKey(word))
+            return "không tìm thấy";
         return listdict.get(word).getWord_explain();
     }
 

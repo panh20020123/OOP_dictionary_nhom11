@@ -1,3 +1,4 @@
+package com.example.suahet;
 public class DictionaryCommandline {
     DictionaryManagement DicMana = new DictionaryManagement();
 

@@ -1,3 +1,4 @@
+package com.example.suahet;
 public class Main {
     public static void main(String[] args) {
         DictionaryCommandline app = new DictionaryCommandline();

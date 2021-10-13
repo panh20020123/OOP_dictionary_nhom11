@@ -1,3 +1,5 @@
+package com.example.suahet;
+
 public class Word {
     private String Word_target;
     private String Word_explain;
@@ -25,10 +27,11 @@ public class Word {
 
     /**
      * print
-     * 
+     *
      * @return string
      */
     public String toString() {
         return "| " + getWord_target() + "      | " + getWord_explain();
     }
 }
+
