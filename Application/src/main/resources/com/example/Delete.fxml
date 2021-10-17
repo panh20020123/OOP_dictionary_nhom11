@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="262.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.suahet.DictionaryController">
+<AnchorPane prefHeight="262.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo_do_hoa.HelloController">
    <children>
       <Label layoutX="141.0" layoutY="24.0" text="Delete">
          <font>
