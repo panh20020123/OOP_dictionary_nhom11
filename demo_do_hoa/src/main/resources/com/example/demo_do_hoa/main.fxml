@@ -6,6 +6,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
@@ -112,13 +114,13 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #50b9c7;" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="tfinput" layoutX="227.0" layoutY="91.0" prefHeight="26.0" prefWidth="178.0" promptText="Write here" />
-                  <Label layoutX="316.0" layoutY="14.0" text="Search">
+                  <TextField fx:id="tfinput" layoutX="236.0" layoutY="138.0" prefHeight="26.0" prefWidth="178.0" promptText="Write here" />
+                  <Label layoutX="325.0" layoutY="55.0" text="Search">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Button layoutX="444.0" layoutY="85.0" mnemonicParsing="false" onAction="#Lookup" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: #5097c7;" text="Search">
+                  <Button layoutX="446.0" layoutY="132.0" mnemonicParsing="false" onAction="#Lookup" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: #5097c7;" text="Search">
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
@@ -127,9 +129,14 @@
                      </opaqueInsets>
                   </Button>
                   <TextArea fx:id="taoutput" layoutY="232.0" prefHeight="501.0" prefWidth="770.0" />
-                  <Label layoutX="342.0" layoutY="192.0" prefHeight="26.0" prefWidth="42.0" text="Mean" />
-                  <Label layoutX="173.0" layoutY="95.0" text="Word" />
-                  <FontAwesomeIcon glyphName="SEARCH" layoutX="457.0" layoutY="108.0" />
+                  <Label layoutX="187.0" layoutY="142.0" text="Word" />
+                  <FontAwesomeIcon glyphName="SEARCH" layoutX="460.0" layoutY="155.0" />
+                  <ImageView fitHeight="85.0" fitWidth="83.0" layoutX="592.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@C:\Users\admin\IdeaProjects\demo_do_hoa\Uet.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="339.0" layoutY="205.0" prefHeight="26.0" prefWidth="42.0" text="Mean" />
 
                </children>
             </AnchorPane>

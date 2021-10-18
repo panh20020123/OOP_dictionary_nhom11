@@ -1,5 +1,3 @@
-a	a
-
 ability	/əˈbɪlɪti/
 
 area	/ˈeərɪə/
@@ -25,6 +23,8 @@ health	/hɛlθ/
 hello	/həˈləu/ 
 
 history	/ˈhɪstəri/
+
+j	j
 
 law	/lɔː/
 

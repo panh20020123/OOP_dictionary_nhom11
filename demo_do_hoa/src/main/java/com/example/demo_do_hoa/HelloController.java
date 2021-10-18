@@ -17,10 +17,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import org.controlsfx.control.textfield.TextFields;
-//import edu.princeton.cs.algs4.StdAudio;
 import javafx.scene.media.Media;
 
-import java.awt.event.MouseEvent;
 import java.io.*;
 import java.net.URL;
 import java.util.*;
@@ -31,21 +29,11 @@ public class HelloController  {
     @FXML
     private TextField tfinput;
     @FXML
-    private TextArea tfout;
-    @FXML
-    private Button btgo;
-    @FXML
-    private Button btwordFix;
-    @FXML
     private TextField tfadd;
     @FXML
     private TextArea tfmean;
     @FXML
     private Button btokadd;
-    @FXML
-    private Button btdel;
-    @FXML
-    private TextField tfdel;
     @FXML
     private TextField tffixword;
     @FXML
@@ -63,12 +51,9 @@ public class HelloController  {
     @FXML
     private Label labfix;
 
-
     private Stage stage;
     private Scene scene;
     private Parent root;
-
-
 
     Dictionary dict = new Dictionary();
     @FXML
@@ -85,14 +70,13 @@ public class HelloController  {
             mediaPlayer.play();
         }
     }
+
     @FXML
     public void Lookup() throws IOException {
         String word = tfinput.getText();
         String s = dict.lookWord(word);
         taoutput.setText(s);
     }
-
-
 
     @FXML
     public void switchToAdd(ActionEvent event) throws IOException {
@@ -107,11 +91,7 @@ public class HelloController  {
         stage.setScene(scene);
         stage.show();
     }
-    @FXML
-    public void switchTodel(ActionEvent event) throws IOException {
-        AnchorPane view = FXMLLoader.load(getClass().getResource("Delete.fxml"));
-        pane.setCenter(view);
-    }
+
     @FXML
     public void switchToFix(ActionEvent event) throws IOException {
         AnchorPane view = FXMLLoader.load(getClass().getResource("Fix.fxml"));
@@ -145,7 +125,6 @@ public class HelloController  {
        String word = tffixword.getText();
         if (Objects.equals(dict.lookWord(word), "ko có dữ liệu"))
             labfix.setText("Từ này không có trong từ điển");
-            //tfout.setText("ko có");
         else {
             String spe = tffixspe.getText();
             String wordE = tffixmean.getText();

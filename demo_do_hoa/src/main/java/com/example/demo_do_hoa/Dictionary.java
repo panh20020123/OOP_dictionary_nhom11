@@ -1,6 +1,5 @@
 package com.example.demo_do_hoa;
 
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Set;
@@ -11,11 +10,8 @@ public class Dictionary {
     public Dictionary() {
         listdict = new TreeMap<String, Word>();
         try {
-
-            //  File f = new File("C:\\Users\\admin\\OneDrive\\Máy tính\\OOP_dictionary_nhom111\\Command\\src\\dictionaries.txt");
             File f = new File("dictionaries.txt");
             if (!f.isFile()) {
-//                f = new File("C:\\Users\\admin\\OneDrive\\Máy tính\\OOP_dictionary_nhom111\\Command\\src\\dictionaries.txt");
                 f = new File("dictionaries.txt");
             }
             FileReader fr = new FileReader(f);
@@ -36,7 +32,6 @@ public class Dictionary {
                 }
                 br.readLine();
             }
-
             fr.close();
             br.close();
         } catch (Exception ex) {
@@ -44,16 +39,11 @@ public class Dictionary {
         }
     }
 
-
-
     public void saveToFile() {
 
         try {
-
-            // File f = new File("C:\\Users\\admin\\OneDrive\\Máy tính\\OOP_dictionary_nhom111\\Command\\src\\dictionaries.txt");
             File f = new File("dictionaries.txt");
             if (!f.isFile()) {
-                // f = new File("C:\\Users\\admin\\OneDrive\\Máy tính\\OOP_dictionary_nhom111\\Command\\src\\dictionaries.txt");
                 f = new File("dictionaries.txt");
             }
             FileWriter fw = new FileWriter(f);
@@ -86,10 +76,6 @@ public class Dictionary {
     }
 
     public void fixWord(String word, String spe, String wordE) {
-
-        if (lookWord(word) == null)
-            System.out.println("Delete operation is failed.");
-            //labfix.setText("Từ này không có trong từ điển");
         if (!spe.equals("0")) {
             listdict.get(word).setWord_spelling(spe);
         }
@@ -111,6 +97,4 @@ public class Dictionary {
         }
         return "ko có dữ liệu";
     }
-
-
 }
