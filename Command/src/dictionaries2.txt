@@ -9,3 +9,5 @@ tea	tra
 beer	bia
 
 wine	ruou
+
+water nuoc
