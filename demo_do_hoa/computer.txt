@@ -1,5 +1,0 @@
-1. Danh từ:
-
-- Thiết bị điện tử để lưu trữ và phân tích thông tin được đưa vào làm các tính toán hoặc tự động điều khiển các máy móc; máy tính; máy điện toán
-
-  a digital computer: máy tính số

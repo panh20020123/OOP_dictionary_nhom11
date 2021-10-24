@@ -1,22 +1,18 @@
 package com.example.demo_do_hoa;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.URI;
 
 public class Word {
     private String Word_target;
-
-    private String Word_spelling;
-
-    public String getWord_spelling() {
-        return Word_spelling;
-    }
-
-    public void setWord_spelling(String Word_spelling) {
-        this.Word_spelling = Word_spelling;
-    }
-
     public String getWord_target() {
         return Word_target;
     }
@@ -29,7 +25,7 @@ public class Word {
 
         String explain = "";
         try {
-            String file =  Word_target + ".txt";
+            String file =  HelloController.link + getWord_target() + ".txt";
             File f = new File(file);
 
             if (!f.isFile()) {
@@ -51,23 +47,35 @@ public class Word {
         } catch (Exception ex) {
             System.out.println("Loi doc file: " + ex);
         }
-        return toString() + explain;
+        return explain;
 
     }
 
 
-    public Word(String Word_target, String Word_spelling) {
-        this.Word_spelling = Word_spelling;
+    public Word(String Word_target) {
         this.Word_target = Word_target;
     }
 
-    /**
-     * print
-     *
-     * @return string
-     */
-    public String toString() {
-        return Word_target + " " + Word_spelling + " " + "\n";
+    public String getAudioLink() {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://api.dictionaryapi.dev/api/v2/entries/en/" + getWord_target())).build();
+        return client.sendAsync(request, HttpResponse.BodyHandlers.ofString()).thenApply(HttpResponse::body)
+                .thenApply(Word::parse).join();
     }
+    public static String parse(String responseBody) {
+        JSONArray word_response = new JSONArray(responseBody);
+        JSONObject word = word_response.getJSONObject(0);
+        JSONArray phonetics = word.getJSONArray("phonetics");
+        String audioLink = null;
+        for (int i = 0; i < phonetics.length(); i++) {
+            JSONObject phonetic = phonetics.getJSONObject(0);
+
+             audioLink = (String) phonetic.get("audio");
+
+        }
+        return audioLink;
+    }
+
 }
 

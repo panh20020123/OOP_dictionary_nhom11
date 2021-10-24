@@ -10,9 +10,9 @@ public class Dictionary {
     public Dictionary() {
         listdict = new TreeMap<String, Word>();
         try {
-            File f = new File("dictionaries.txt");
+            File f = new File(HelloController.link + "dictword.txt");
             if (!f.isFile()) {
-                f = new File("dictionaries.txt");
+                f = new File(HelloController.link + "dictword.txt");
             }
             FileReader fr = new FileReader(f);
 
@@ -20,17 +20,9 @@ public class Dictionary {
 
             String fromText;
             while ((fromText = br.readLine()) != null) {
-                String word;
-                String wordE;
-                for (int i = 0; i < fromText.length(); i++) {
-                    if (fromText.charAt(i) == '\t') {
-                        word = fromText.substring(0, i);
-                        wordE = fromText.substring(i + 1);
-                        insertWord(word, wordE);
-                        break;
-                    }
-                }
-                br.readLine();
+                //String word;
+                insertWord(fromText);
+                //br.readLine();
             }
             fr.close();
             br.close();
@@ -39,18 +31,19 @@ public class Dictionary {
         }
     }
 
+    //String link = "C:\\Users\\admin\\Downloads\\textwords\\textwords"
     public void saveToFile() {
 
         try {
-            File f = new File("dictionaries.txt");
+            File f = new File(HelloController.link + "dictword.txt");
             if (!f.isFile()) {
-                f = new File("dictionaries.txt");
+                f = new File(HelloController.link + "dictword.txt");
             }
             FileWriter fw = new FileWriter(f);
 
             Set<String> keySet = listdict.keySet();
             for (String key : keySet) {
-                fw.write(key + "\t" + listdict.get(key).getWord_spelling() + '\n' + '\n');
+                fw.write(key + '\n');
             }
 
             fw.close();
@@ -60,15 +53,15 @@ public class Dictionary {
         }
     }
 
-    public void insertWord(String word, String wordE) {
-        Word w = new Word(word, wordE);
+    public void insertWord(String word) {
+        Word w = new Word(word);
         listdict.put(word, w);
     }
 
     public void deleteWord(String word) {
         try {
-            File file = new File(word + ".txt");
-
+            File file = new File(HelloController.link + word + ".txt");
+            file.delete();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -76,25 +69,62 @@ public class Dictionary {
     }
 
     public void fixWord(String word, String spe, String wordE) {
-        if (!spe.equals("0")) {
-            listdict.get(word).setWord_spelling(spe);
-        }
-        if (!wordE.equals("0")) {
-            try {
-                FileWriter fw = new FileWriter(new File(word + ".txt"));
-                fw.write(wordE);
-                fw.close();
-            } catch (IOException ex) {
-                System.out.println("Loi ghi file: " + ex);
-            }
-        }
+//        if (!spe.equals("0")) {
+//            listdict.get(word).setWord_spelling(spe);
+//        }
+//        if (!wordE.equals("0")) {
+//            try {
+//                FileWriter fw = new FileWriter(new File(word + ".txt"));
+//                fw.write(wordE);
+//                fw.close();
+//            } catch (IOException ex) {
+//                System.out.println("Loi ghi file: " + ex);
+//            }
+//        }
     }
 
-    public String lookWord(String word) {
 
+    public String lookWord(String word) {
         if (listdict.containsKey(word)) {
             return listdict.get(word).getWord_explain();
         }
-        return "ko có dữ liệu";
+        return "ko có từ này trong từ điển";
     }
+
+
+    //ArrayList<String> containsInput = new ArrayList<String>();
+    public String[] searcher(String word) {
+        // String kq = "";
+        String[] list = new String[20];
+        if (!listdict.containsKey(word)) {
+            int n = word.length();
+            int j = 0;
+            Set<String> keySet = listdict.keySet();
+           // int count = 0;
+            for (String key : keySet) {
+                //if (count < 50) {
+                    int i = key.length();
+                    if (i >= n) {
+                        String s = key.substring(0, n);
+                        if (s.equals(word)) {
+                            // kq = kq + " - " + key;
+                            list[j++] = key;
+                            if (j == 20) {
+                                break;
+                            }
+                            //containsInput.add(key);
+                            //count++;
+                        }
+                    }
+               // } else
+                  //  break;
+            }
+            return list;
+            // return kq;
+        }
+        return list;
+    }
+
+
+
 }
