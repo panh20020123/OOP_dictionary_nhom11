@@ -8,15 +8,6 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class GoogleTranslator {
-    // public static void main(String[] args) throws IOException {
-    //     Scanner scanner = new Scanner(System.in);
-    //     String text = scanner.nextLine();
-    //     // String text = "easy";
-    //     // System.out.println("Translated text: " + translate("en", "vi", text));
-    //     System.out.println(translate("", "vi", text));
-    //     scanner.close();
-    // }
-
     public static String translate(String langFrom, String langTo, String text) throws IOException {
         String urlStr = "https://script.google.com/macros/s/AKfycbyPaJa5PXO8Sla7H6SAFrZyzMMtbzdMW4_OHB42yBvgz0VA99OcPbZzWdr2hr-_Kp1T/exec" +
                 "?q=" + URLEncoder.encode(text, "UTF-8") +

@@ -43,8 +43,6 @@ public class HelloController implements Initializable{
     @FXML
     private Label labadd;
     @FXML
-    private Label labfix;
-    @FXML
     private TextArea tainput_sentence;
     @FXML
     private TextArea taoutput_sentence;
@@ -52,6 +50,14 @@ public class HelloController implements Initializable{
     private Button btnfix;
     @FXML
     private Button btnListen;
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
+    public static String link = "C:\\Users\\admin\\Downloads\\textwords\\textwords\\";
+    Dictionary dict = new Dictionary();
+
 
     @FXML
     void Translate_sentence(ActionEvent event) {
@@ -65,14 +71,7 @@ public class HelloController implements Initializable{
         }
     }
 
-    @FXML
-    private Button save;
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
-
-    Dictionary dict = new Dictionary();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
@@ -93,17 +92,12 @@ public class HelloController implements Initializable{
             TextFields.bindAutoCompletion(tfinput, t -> {
                         return Arrays.asList(llist).stream().filter(
                                 elem -> {
-                                    //     System.out.println(elem);
-
                                     return (elem).toLowerCase().startsWith(tfinput.getText().toLowerCase());
-
-
                                 }
                         ).collect(Collectors.toList());
                     }
             ).setVisibleRowCount(5);
         } catch (Exception e) {
-            //System.out.println("");
         }
     }
 
@@ -111,6 +105,7 @@ public class HelloController implements Initializable{
     public void exit() {
         javafx.application.Platform.exit();
     }
+
     @FXML
     public void listen() {
         String s = tfinput.getText();
@@ -119,7 +114,6 @@ public class HelloController implements Initializable{
             if (dict.listdict.get(s).getAudioLink() != null) {
                 btnListen.setVisible(true);
                 Media sound = new Media("https:" + dict.listdict.get(s).getAudioLink());
-                // Media sound = new Media("https://ssl.gstatic.com/dictionary/static/sounds/20200429/" + s + "--_gb_1.mp3");
                 MediaPlayer mediaPlayer = new MediaPlayer(sound);
                 mediaPlayer.play();
             } else {
@@ -129,11 +123,7 @@ public class HelloController implements Initializable{
         }
     }
 
-    public static String link = "C:\\Users\\admin\\Downloads\\textwords\\textwords\\";
-    @FXML
-    void save_file(ActionEvent event) {
-        dict.saveToFile();
-    }
+
 
     @FXML
     void SwitchSentence(ActionEvent event) throws IOException{
@@ -181,27 +171,7 @@ public class HelloController implements Initializable{
         else {
             labadd.setText("Lỗi thêm từ");
         }
-
     }
-
-
-
-
-//    public void insert(ActionEvent event) throws IOException {
-//        String word = tfadd.getText();
-//        String wordspe = tfaddspe.getText();
-//        String wordE = tfmean.getText();
-//        dict.insertWord(word, wordspe);
-//        try {
-//            FileWriter fw = new FileWriter(new File(word + ".txt"));
-//            fw.write(wordE);
-//            fw.close();
-//        } catch (IOException ex) {
-//            System.out.println("Loi ghi file: " + ex);
-//        }
-//        labadd.setText("Từ đã được thêm");
-//        dict.saveToFile();
-//    }
 
     public void Delete() {
         String word  = tfinput.getText();
@@ -210,9 +180,6 @@ public class HelloController implements Initializable{
         dict.saveToFile();
     }
 
-    private Parent root1;
-    private DialogPane dialog;
-    //boolean edit = true;
     private boolean edit = false;
     public void Fix(ActionEvent event) throws IOException {
         if (!edit) {
@@ -234,32 +201,5 @@ public class HelloController implements Initializable{
             }
             taoutput.setText("Từ đã được sửa");
         }
-//        if (edit) {
-//
-//        }
-//       String word = tffixword.getText();
-//
-//        if (Objects.equals(dict.lookWord(word), "ko có dữ liệu"))
-//        {
-//            Stage stage = new Stage();
-//            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Alert.fxml")));
-//            Scene scene_a = new Scene(root);
-//            stage.setScene(scene_a);
-//            //stage.initStyle(StageStyle.UNDECORATED);
-//            stage.show();
-//        }
-//
-//        else {
-//            String spe = tffixspe.getText();
-//            String wordE = tffixmean.getText();
-//            dict.fixWord(word,spe,wordE);
-//            labfix.setText("Sửa từ thành công");
-//            dict.saveToFile();
-//        }
     }
-
-
-
-    //private ArrayList<String> pos = new ArrayList<>();
-
 }

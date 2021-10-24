@@ -31,7 +31,7 @@ public class Dictionary {
         }
     }
 
-    //String link = "C:\\Users\\admin\\Downloads\\textwords\\textwords"
+
     public void saveToFile() {
 
         try {
@@ -68,22 +68,6 @@ public class Dictionary {
         listdict.remove(word);
     }
 
-    public void fixWord(String word, String spe, String wordE) {
-//        if (!spe.equals("0")) {
-//            listdict.get(word).setWord_spelling(spe);
-//        }
-//        if (!wordE.equals("0")) {
-//            try {
-//                FileWriter fw = new FileWriter(new File(word + ".txt"));
-//                fw.write(wordE);
-//                fw.close();
-//            } catch (IOException ex) {
-//                System.out.println("Loi ghi file: " + ex);
-//            }
-//        }
-    }
-
-
     public String lookWord(String word) {
         if (listdict.containsKey(word)) {
             return listdict.get(word).getWord_explain();
@@ -92,39 +76,27 @@ public class Dictionary {
     }
 
 
-    //ArrayList<String> containsInput = new ArrayList<String>();
+
     public String[] searcher(String word) {
-        // String kq = "";
         String[] list = new String[20];
         if (!listdict.containsKey(word)) {
             int n = word.length();
             int j = 0;
             Set<String> keySet = listdict.keySet();
-           // int count = 0;
             for (String key : keySet) {
-                //if (count < 50) {
                     int i = key.length();
                     if (i >= n) {
                         String s = key.substring(0, n);
                         if (s.equals(word)) {
-                            // kq = kq + " - " + key;
                             list[j++] = key;
                             if (j == 20) {
                                 break;
                             }
-                            //containsInput.add(key);
-                            //count++;
                         }
                     }
-               // } else
-                  //  break;
             }
             return list;
-            // return kq;
         }
         return list;
     }
-
-
-
 }
