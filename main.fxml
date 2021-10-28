@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="960.0" style="-fx-background-color: #101010; -fx-background-radius: 15 15 15 15; -fx-border-radius: 15 15 15 15;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HelloController">
+   <children>
+      <BorderPane fx:id="pane" prefHeight="502.0" prefWidth="672.0" style="-fx-background-radius: 15 15 15 15; -fx-border-radius: 15 15 15 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox alignment="TOP_CENTER" prefWidth="160.0" spacing="20.0" style="-fx-background-color: #101010;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#switchTomain" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #101010; -fx-background-radius: 30 30 30 30;" text="Search" textAlignment="CENTER" underline="true">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" />
+                     </graphic>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.21568627655506134" blue="0.2666666805744171" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#switchToAdd" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #101010; -fx-background-radius: 30 30 30 30;" text="Add" underline="true">
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="PLUS" />
+                     </graphic>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.21568627655506134" blue="0.2666666805744171" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#SwitchSentence" prefHeight="26.0" prefWidth="188.0" style="-fx-background-color: #101010;" text="Translate" underline="true">
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </padding>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="LANGUAGE" size="1.2em" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="0.21568627655506134" blue="0.2666666805744171" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets top="50.0" />
+               </padding></VBox>
+         </left>
+         <center>
+            <AnchorPane style="-fx-background-color: #101010;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="298.0" layoutY="14.0" text="Search" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" layoutX="185.0" layoutY="78.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+                     <children>
+                        <Label alignment="CENTER" prefWidth="100.0" text="Word" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfinput" promptText="Nhập từ để tra" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#Lookup" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #2f3537; -fx-background-radius: 15 15 15 15;" text="Search" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </opaqueInsets>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" />
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.35" />
+                           </effect>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="100.0" right="100.0" />
+                     </padding>
+                  </HBox>
+                  <TextArea fx:id="taoutput" editable="false" layoutX="215.0" layoutY="246.0" prefHeight="458.0" prefWidth="717.0" wrapText="true" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="200.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextArea>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="150.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="150.0">
+                     <children>
+                        <Button fx:id="btnListen" alignment="CENTER" mnemonicParsing="false" onAction="#listen" style="-fx-background-color: #2f3537;" text="Listen" textFill="WHITE">
+                           <opaqueInsets>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </opaqueInsets>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="VOLUME_UP" text="" />
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnFavorite" alignment="CENTER" mnemonicParsing="false" onAction="#listen" style="-fx-background-color: #2f3537;" textFill="WHITE">
+                           <opaqueInsets>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </opaqueInsets>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="STAR" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="558.0" layoutY="176.0" spacing="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="150.0">
+                     <children>
+                        <Button fx:id="btnfix" mnemonicParsing="false" onAction="#Fix" prefHeight="41.0" prefWidth="68.0" style="-fx-background-color: #2f3537;" text="Edit" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </opaqueInsets>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="EDIT" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button lineSpacing="100.0" mnemonicParsing="false" onAction="#Delete" prefHeight="41.0" prefWidth="76.0" style="-fx-background-color: #2f3537;" text="Delete" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </opaqueInsets>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="TRASH" tabSize="10">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </FontAwesomeIcon>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="50.0" style="-fx-background-color: #101010;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="46.0" layoutY="8.0" text="Dictionary N11" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007680491551459294">
+                                 <color>
+                                    <Color red="0.27450981736183167" green="0.23529411852359772" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="0.21568627655506134" blue="0.2666666805744171" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <FontAwesomeIcon fill="#faf5f5" glyphName="BOOK" layoutX="14.0" layoutY="30.0" size="2.5em" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0" />
+                  <Button layoutX="832.0" layoutY="-1.0" mnemonicParsing="false" onAction="#exit" prefWidth="60.0" style="-fx-background-color: #101010;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="TIMES" size="2em" text="">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></FontAwesomeIcon>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
