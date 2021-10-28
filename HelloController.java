@@ -54,6 +54,10 @@ public class HelloController implements Initializable{
     private ChoiceBox<String> fromLangChoice = new ChoiceBox<String>();
     @FXML
     private ChoiceBox<String> toLangChoice = new ChoiceBox<String>();
+    @FXML
+    private Button fromLangListenBtn;
+    @FXML
+    private Button toLangListenBtn;
 
     private Stage stage;
     private Scene scene;
@@ -135,6 +139,22 @@ public class HelloController implements Initializable{
             //     // btnListen.setVisible(false);
             // }
         }
+    }
+
+    @FXML
+    public void listenFromLangSentence() {
+        String s = tainput_sentence.getText();
+        Media sound =  new Media("https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl="+ GoogleTranslator.languages.get(fromLangChoice.getValue()) + "&q=" + (s.contains(" ") ? String.join("+", (s.split(" "))) : s));
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
+    }
+
+    @FXML
+    public void listenToLangSentence() {
+        String s = taoutput_sentence.getText();
+        Media sound =  new Media("https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl="+ GoogleTranslator.languages.get(toLangChoice.getValue()) + "&q=" + (s.contains(" ") ? String.join("+", (s.split(" "))) : s));
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
     }
 
     @FXML

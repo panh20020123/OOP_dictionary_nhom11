@@ -20,6 +20,7 @@
       <GridPane layoutX="14.0" layoutY="198.0" vgap="30.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
          <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="50.0" valignment="CENTER" vgrow="ALWAYS" />
@@ -27,7 +28,7 @@
             <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextArea fx:id="tainput_sentence" prefHeight="50.0" promptText="Nhập câu để dịch" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+            <TextArea fx:id="tainput_sentence" prefHeight="254.0" prefWidth="556.0" promptText="Nhập câu để dịch" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                <font>
                   <Font size="16.0" />
                </font>
@@ -84,6 +85,34 @@
                   <Font size="16.0" />
                </font>
             </TextArea>
+            <Button fx:id="fromLangListenBtn" mnemonicParsing="false" onAction="#listenFromLangSentence" style="-fx-background-color: #2f3537;" text="Listen" textFill="WHITE" GridPane.columnIndex="1">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="VOLUME_UP" />
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="toLangListenBtn" mnemonicParsing="false" onAction="#listenToLangSentence" style="-fx-background-color: #2f3537;" text="Listen" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="VOLUME_UP" />
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
       </GridPane>
       <Label alignment="CENTER" layoutX="341.0" layoutY="45.0" text="Translate" textFill="#eae4e4" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
