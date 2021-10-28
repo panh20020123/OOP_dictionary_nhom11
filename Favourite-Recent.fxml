@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
@@ -35,15 +36,16 @@
             </Label>
             <ListView editable="true" fixedCellSize="50.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
             <ListView editable="true" fixedCellSize="50.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField GridPane.rowIndex="2">
+            <TextField style="-fx-text-fill: #fff;" GridPane.columnSpan="2" GridPane.rowIndex="2">
                <font>
                   <Font size="14.0" />
                </font>
-            </TextField>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <font>
-                  <Font size="14.0" />
-               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
             </TextField>
             <Label alignment="CENTER" text="Your Words" textAlignment="CENTER" textFill="#fcf4f4" GridPane.columnSpan="2147483647">
                <font>
