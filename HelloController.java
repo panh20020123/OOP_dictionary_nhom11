@@ -1,3 +1,4 @@
+package com.example.demo0;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -63,7 +64,7 @@ public class HelloController implements Initializable{
     private Scene scene;
     private Parent root;
 
-    public static String link = "F:\\2Study\\2Nam2\\CS\\OOP\\javaAPItests\\textwords\\";
+    public static String link = "D:\\textwords\\";
     Dictionary dict = new Dictionary();
 
     @FXML
@@ -128,11 +129,11 @@ public class HelloController implements Initializable{
 
         if(dict.listdict.containsKey(s)) {
             // if (dict.listdict.get(s).getAudioLink() != null) {
-                btnListen.setVisible(true);
-                // Media sound = new Media("https:" + dict.listdict.get(s).getAudioLink());
-                Media sound = new Media(dict.listdict.get(s).getAudioLink());
-                MediaPlayer mediaPlayer = new MediaPlayer(sound);
-                mediaPlayer.play();
+            btnListen.setVisible(true);
+            // Media sound = new Media("https:" + dict.listdict.get(s).getAudioLink());
+            Media sound = new Media(dict.listdict.get(s).getAudioLink());
+            MediaPlayer mediaPlayer = new MediaPlayer(sound);
+            mediaPlayer.play();
             // } else {
             //     Media sound = new Media("https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=" + s);
             //     MediaPlayer mediaPlayer = new MediaPlayer(sound);
@@ -166,6 +167,7 @@ public class HelloController implements Initializable{
     @FXML
     public void Lookup(ActionEvent event) throws IOException {
         String word = tfinput.getText();
+        word = word.toLowerCase();
         String s = dict.lookWord(word);
         taoutput.setText(s);
     }
@@ -188,9 +190,12 @@ public class HelloController implements Initializable{
         String word = tfadd.getText();
         String wordE = tfmean.getText();
         String wordS = tfaddspe.getText();
+        word = word.toLowerCase();
+
+        String loi = "";
+
         if (word != "" && wordE != "" && wordS != "" && !dict.listdict.containsKey(word)) {
             dict.insertWord(word);
-
             try {
                 FileWriter fw = new FileWriter(new File(link + word + ".txt"));
                 fw.write(wordS + '\n' + wordE);
@@ -201,21 +206,25 @@ public class HelloController implements Initializable{
             popUp.setVisible(true);
             labadd.setText("Thêm từ thành công");
             dict.saveToFile();
+            return;
         }
-        else {
-            popUp.setVisible(true);
-            labadd.setText("Lỗi thêm từ");
-        }
+        else if (dict.listdict.containsKey(word)) loi = "Tu da co!";
+        else loi = "Thieu du lieu!";
+
+        popUp.setVisible(true);
+        labadd.setText("Lỗi thêm từ: " + loi);
     }
 
-    public void Delete() {
+    public void Delete(ActionEvent event) throws IOException {
         String word  = tfinput.getText();
         dict.deleteWord(word);
-        taoutput.setText("từ đã được xóa");
+        //taoutput.setText("từ đã được xóa");
         dict.saveToFile();
+        switchTomain(event);
     }
 
     private boolean edit = false;
+
     public void Fix(ActionEvent event) throws IOException {
         if (!edit) {
             btnfix.setText("Save");
@@ -238,4 +247,5 @@ public class HelloController implements Initializable{
             taoutput.setText("Từ đã được sửa");
         }
     }
+
 }
